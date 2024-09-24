@@ -1,0 +1,3 @@
+CAPGENOPTS="-C -Csw3d -cap_ground_layer pwell -p poly,allGates,diff -lvs_blocking nfet,nfet -lvs_blocking pfet,pfet -lvs_blocking hvtpfet,hvtpfet -lvs_blocking lvtpfet,lvtpfet -lvs_blocking lvtnfet,lvtnfet -lvs_blocking HV_FET_gate,HV_FET_gate -canonical_res_caps -length_units meters -lvs ./lvsfile -p2lvs ./_p2lvsfile ."
+LVSFILE="${RCXBIN}/lvsfile"
+CAPS2DVERSION="* caps2d version: 10"

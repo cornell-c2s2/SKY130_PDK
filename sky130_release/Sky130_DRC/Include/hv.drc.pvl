@@ -1,0 +1,18 @@
+//hv Rules//
+
+
+//rule hv.X.1 {
+//	caption "High voltage source/drain regions must be tagged by diff:hv"
+//	caption "NOT CODED Informational Only"
+//}
+
+//rule hv.X.3 {
+//	caption "High voltage poly can be drawn over multiple diff regions that are ALL reverse-biased by at least 300 mV (existence of reverse-bias is not checked by the CAD flow). It can also be drawn over multiple diffs when all sources and all drain are shorted together. In these case, the high voltage poly can be tagged with the text:dg label with a value “hv_bb”. Exceptions to this use of the hv_bb label must be approved by technology. Under certain bias conditions, high voltage poly tagged with hv_bb can cross an nwell boundary. The poly of the drain extended device crosses nwell by construction and can be tagged with the “hv_bb” label. Use of the hv_bb label on high voltage poly crossing an nwell boundary must be approved by technology. All high voltage poly tagged with hv_bb will not be checked to hv.poly.1, hv.poly.2, hv.poly.3 and hv.poly.4."
+//	caption "NOT CODED Information Only"
+//}
+
+//rule hv.X.4 {
+//	caption "Any piece of layout that is shorted to hv_source/drain becomes a high voltage feature."
+//	caption "NOT CODED Information Only"
+//}
+

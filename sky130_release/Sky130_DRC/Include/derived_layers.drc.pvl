@@ -1,0 +1,114 @@
+// Intermediate Layer Preparation
+
+select -outside pad areaid.ft -outputlayer bondPad
+
+and capm met2 -outputlayer bottom_plate_pvsTmp1
+size bottom_plate_pvsTmp1 -by 3.00 -outputlayer bottom_plate
+
+select -enclose capm via2 -gt 1 -outputlayer capacitor
+select -cut -not capm via2 -outputlayer dummy_capacitor
+
+select -label poly -textname "dummy_poly" -textlayer text -outputlayer dummy_poly
+
+holes areaid.sl -outputlayer Chip_extent_pvsTmp1
+or Chip_extent_pvsTmp1 areaid.sl -outputlayer Chip_extent
+
+or cfom cp1m_mk cmm1_mk cmm2_mk -outputlayer Diecut_pmm_pvsTmp1
+not areaid.dt Diecut_pmm_pvsTmp1 -outputlayer Diecut_pmm
+
+with_width met1 -gt 3.000 -outputlayer huge_met1
+with_width met2 -gt 3.000 -outputlayer huge_met2
+with_width met3 -gt 3.000 -outputlayer huge_met3
+with_width met4 -gt 3.000 -outputlayer huge_met4
+with_width met5 -gt 3.000 -outputlayer huge_met5
+
+with_width pad -gt 100.000 -outputlayer hugePad
+
+not Chip_extent nwell -outputlayer pwell
+
+select -touch ptap pwell_res -outputlayer pwell_terminal  //djb
+
+and pwell dnwell -outputlayer iso_pwell
+
+and poly diff -outputlayer gate_a
+select -donut -not gate_a -outputlayer gate
+not gate nwell -outputlayer nfet
+and gate nwell -outputlayer pfet
+
+select -inside gate lvtn -outputlayer LVTN_Gate
+
+not diff nwell -outputlayer ndiff
+and diff nwell -outputlayer pdiff
+and tap nwell -outputlayer ntap 
+not tap nwell -outputlayer ptap
+
+and diff hvi -outputlayer hdiff
+
+or diff tap -outputlayer poly_licon1_pvsTmp1
+not poly_licon1_pvsTmp1 poly -outputlayer poly_licon1_pvsTmp2
+select -cut -not licon1 poly_licon1_pvsTmp2 -outputlayer poly_licon1
+
+and tap licon1 -outputlayer tap_licon
+not tap poly -outputlayer tap_notPoly
+select -inside tap nwell -outputlayer tap_nwell
+
+not nwell hvi -outputlayer Var_channel_pvsTmp1
+and poly tap -outputlayer Var_channel_pvsTmp2
+and Var_channel_pvsTmp2 Var_channel_pvsTmp1 -outputlayer Var_channel_pvsTmp3
+not Var_channel_pvsTmp3 areaid.ce -outputlayer Var_channel
+
+select -cut tap Var_channel -outputlayer VaracTap
+
+//djb select -inside met2 met4_fuse -outputlayer contact
+select -enclose met4 met4_fuse -outputlayer fuse
+not fuse met4_fuse -outputlayer fuse_contact
+//djb not contact met4_fuse -outputlayer fuse_contact
+//djb select -outside -not met4_fuse via -outputlayer bad_fuse_metal_1
+//djb select -outside -not met4_fuse contact -outputlayer bad_fuse_metal_2
+//djb or bad_fuse_metal_1 bad_fuse_metal_2 -outputlayer bad_fuse_metal
+//djb not met4_fuse bad_fuse_metal -outputlayer fuse_shield
+select -enclose -not met4 via3 -outputlayer fuse_shield_a
+select -enclose -not fuse_shield_a via4 fuse_shield_b
+rect_chk fuse_shield_b -eq 0.500 -by -eq 2.400 -outputlayer fuse_shield
+
+
+
+select -interact -not tap diff -outputlayer isolated_tap
+not diff dnwell -outputlayer de_nFet_gate_pvsTmp1
+select -inside deFET_gate de_nFet_gate_pvsTmp1 -outputlayer de_nFet_gate
+and poly areaid.en -outputlayer deFET_gate_pvsTmp1
+select -inside -not deFET_gate_pvsTmp1 pwde -outputlayer deFET_gate
+and diff areaid.en -outputlayer de_nFet_source_pvsTmp1
+select -inside de_nFet_source_pvsTmp1 de_nFet_gate -outputlayer de_nFet_source
+and isolated_tap areaid.en -outputlayer de_nFet_drain_pvsTmp1
+select -inside de_nFet_drain_pvsTmp1 nwell -outputlayer de_nFet_drain
+
+and diff dnwell -outputlayer de_pFet_gate_pvsTmp1
+select -inside deFET_gate de_pFet_gate_pvsTmp1 -outputlayer de_pFet_gate
+and diff areaid.en -outputlayer de_pFet_source_pvsTmp1
+select -inside de_pfet_source_pvsTmp1 de_pFet_gate -outputlayer de_pFet_source
+and isolated_tap areaid.en -outputlayer de_pFet_drain_pvsTmp1
+select -inside -not de_pFet_drain_pvsTmp1 nwell -outputlayer de_pFet_drain
+
+and rpm psdm -outputlayer prec_resistor
+
+and nwell hvi -outputlayer nhvi
+select -inside nwell areaid.hl -outputlayer nhl
+or nhvi nhl -outputlayer hv_nwell
+
+and tap hvi -outputlayer htap
+
+select -inside poly vhvi -outputlayer VHVPoly
+and VHVPoly diff -outputlayer VHVGate
+
+and diff tap -outputlayer dtap
+and dtap vhvi -outputlayer dhvi
+not dhvi poly -outputlayer dpoly
+not dpoly diff_res -outputlayer VHVSourceDrain
+
+connect li1 poly -by licon1
+connect met1 li1 -by mcon
+connect met2 met1 -by via
+connect met3 met2 -by via2
+connect met4 met3 -by via3
+connect met5 met4 -by via4

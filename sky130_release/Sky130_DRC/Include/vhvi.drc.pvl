@@ -1,0 +1,70 @@
+//rule vhvi.vhv.1 {
+//	caption "Terminals operating at nominal 12V (maximum 16V) bias must be tagged as Very-High-Voltage (VHV) using vhvi:dg layer" 
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule vhvi.vhv.2 {
+//	caption "A source or drain of a drain-extended device can be tagged by vhvi:dg. A device with either source or drain (not both) tagged with vhvi:dg serves as a VHV propagation stopper"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule vhvi.vhv.3 {
+//	caption "Any feature connected to VHVSourceDrain becomes a very-high-voltage feature"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule vhvi.vhv.4 {
+//	caption "Any feature connected to VHVPoly becomes a very-high-voltage feature"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule vhvi.vhv.5 {
+//	caption "Diffusion that is not a part of a drain-extended device (i.e., diff not areaid:en) must not be on the same net as VHVSourceDrain. Only diffusion inside areaid.ed and LV diffusion tagged with vhvi:dg are exempted."
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule vhvi.vhv.6 {
+//	caption "Poly resistor can act as a VHV propagation stopper. For this, it should be tagged with text “vhv_block”"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule vhvi.1.- {
+	caption "Min width of vhvi:dg >= 0.020 um"
+	inte vhvi -lt 0.020 -single_point
+}
+
+rule vhvi.2.- {
+	caption "Vhvi:dg cannot overlap areaid:ce"
+	and vhvi areaid.cd
+}
+
+rule vhvi.3.- {
+	caption "VHVGate must overlap hvi:dg"	
+	select -interact -not VHVGate hvi
+}
+
+//rule vhvi.4.- {
+//	caption "Poly connected to the same net as a VHVSourceDrain must be tagged with vhvi:dg layer"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule vhvi.5.- {
+	caption "Vhvi:dg cannot straddle VHVSourceDrain"
+	select -cut vhvi VHVSourceDrain
+}
+
+rule vhvi.6.- {
+	caption "Vhvi:dg overlapping VHVSourceDrain must not overlap poly"	
+	select -interact -not vhvi VHVSourceDrain -outputlayer vhvi.6_a
+	and vhvi.6_a poly
+}
+
+rule vhvi.7.- {
+	caption "Vhvi:dg cannot straddle VHVPoly"
+	select -cut vhvi VHVPoly
+}
+
+rule vhvi.8.- {
+	caption "Min space between nwell tagged with vhvi:dg and deep nwell, nwell, or n+diff on a separate net (except for n+diff overlapping nwell tagged with vhvi:dg) >= 11.240 um"
+	exte vhvi nwell -lt 11.240 -single_point	
+}

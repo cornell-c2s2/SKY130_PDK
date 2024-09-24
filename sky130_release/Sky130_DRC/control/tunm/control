@@ -1,0 +1,15 @@
+select_check -drc "tunm" "cpy*"
+or PC_Tab M1TCB_PCTab -outputlayer PC_Tabs
+rule cpy1 { copy PC_Tabs }
+edge_boolean -coincident_only -not pc_no_sram PC_Tabs -outputlayer pvsTmpLyr26
+rule cpy2 { copy pvsTmpLyr26 }
+edge_boolean -coincident_only -not PC PC_Tabs -outputlayer pvsTmpLyr27
+rule cpy3 { copy pvsTmpLyr27 }
+exte pvsTmpLyr26 pvsTmpLyr27 -lt 0.076 -abut -lt 90 -output region -outputlayer boundary
+rule cpy4 { copy boundary }
+
+
+output -drc cpy1 -oasis 1 0 interim.oas -maximum all
+output -drc cpy2 -oasis 2 0 interim.oas -maximum all
+output -drc cpy3 -oasis 3 0 interim.oas -maximum all
+output -drc cpy4 -oasis 4 0 interim.oas -maximum all

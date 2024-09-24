@@ -1,0 +1,80 @@
+//////////////////////////////////////////////////////////////////
+//                 via3 rules                                   //
+//////////////////////////////////////////////////////////////////
+
+rule via3.1 {
+    caption "Min and max L and W of via3 (except for rule via3.1a) == 0.200 um"
+    select -inside via3 areaid.mt -outputlayer via3.1_a
+    rect_chk -not via3.1_a -eq 0.200
+}
+
+#IFNDEF Copper
+    rule via3.1a {
+        caption "Al FLow - Two sized of square via3 allowed inside areaid.mt: 0.200um and 0.800um"
+        select -inside via3 areaid.mt -outputlayer via3.1a_a
+        rect_chk -not via3.1a_a -eq 0.200 -orthogonal_only -outputlayer via3.1a_b
+        rect_chk -not via3.1a_b -eq 0.800 -orthogonal_only
+
+    }
+
+    rule via3.2 {
+        caption "AL Flow - Spacing of via3 to via3 >= 0.200 um"
+        exte via3 -lt 0.200 -single_point
+    }
+
+    //rule via3.3 {
+    //    caption "AL Flow - Only min. square via3 are allowed except die seal ring where via3 are (Via2 CD)*L == 0.400 um"
+    //    caption "    TBA   "
+    //}
+
+    rule via3.4 {
+        caption "AL Flow - Via3 must be enclosed by Met3 by at least >= 0.060 um"
+        enc via3 met3 -lt 0.060 -outside_also
+    }
+
+    rule via3.5 {
+        caption "AL Flow - Via3 must be enclosed by Met3 on one of two adjacent sides by at least >= 0.090 um"
+        rect_enc via3 met3 -good 0.090 0.000 0.090 0.000
+    }
+#ENDIF // Alumimum
+
+#IFDEF Copper
+    rule via3.11 {
+        caption "Cu FLow - Min and max L and W of via outside areaid.mt == 0.210 um"
+        not via3 areaid.mt -outputlayer via3.1a_a
+        rect_chk -not via3.1a_a -eq 0.210 -orthogonal_only
+    }
+
+    rule via3.12 {
+        caption "Cu Flow - Spacing of via3 to via3 >= 0.180 um"
+        exte via3 -lt 0.180 -single_point
+    }
+
+    rule via3.13 {
+        caption "Cu Flow - Via3 must be enclosed by Met3 by at least >= 0.055 um"   
+        enc via3 met3 -lt 0.055
+    }
+
+    //rule via3.14 {
+    //    caption "Cu Flow - Min Spacing betweeb via3 rows >= 0.350 um"
+    //    caption "    TBA   "
+    //}
+
+    //rule via3.irdrc.1 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via3.irdrc.2 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via3.irdrc.3 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via3.irdrc.4 {
+    //    caption "    TBA   "
+    //}
+#ENDIF // Copper
+
+

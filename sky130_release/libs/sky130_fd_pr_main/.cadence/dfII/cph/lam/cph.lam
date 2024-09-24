@@ -1,0 +1,308 @@
+<!DOCTYPE LAM_FILE>
+<LIBRARY_DATA>
+    <VERSION NUMBER="0.2" />
+    <LOGICAL>
+       <LIB NAME="sky130_fd_pr_main">
+           <CELL NAME="npn_05v5">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>BN</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="pnp_05v5">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>BN</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_xhigh_po_5p73">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_xhigh_po_2p85">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_xhigh_po_1p41">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_xhigh_po_0p69">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_xhigh_po_0p35">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_high_po_5p73">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_high_po_2p85">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_high_po_1p41">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_high_po_0p69">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_high_po_0p35">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_generic_pd">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="res_generic_nd">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>B</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="npn_11v0">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN>BN</GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+           <CELL NAME="cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv">
+               <VIEW NAME="symbol" >
+                   <PARAMETERS>
+                       <IGNORE>
+                           <CHECK></CHECK>
+                       </IGNORE>
+                   </PARAMETERS>
+                   <TERMINALS>
+                       <IGNORE>
+                           <GEN></GEN>
+                       </IGNORE>
+                   </TERMINALS>
+               </VIEW>
+           </CELL>
+       </LIB>
+    </LOGICAL>
+    <PHYSICAL>
+       <COMPONENT_TYPE_GROUPS>
+          <LIB NAME="sky130_fd_pr_main">
+             <COMPONENT_TYPE_GROUP NAME="nmos">
+                <COMP_CLASS>NMOS</COMP_CLASS>
+                <WIDTH>fw</WIDTH>
+                <ACTIVE_LP>diff drawing</ACTIVE_LP>
+                <FOLD_THRESH>5</FOLD_THRESH>
+             </COMPONENT_TYPE_GROUP>
+             <COMPONENT_TYPE_GROUP NAME="pmos">
+                <COMP_CLASS>PMOS</COMP_CLASS>
+                <WIDTH>fw</WIDTH>
+                <ACTIVE_LP>diff drawing</ACTIVE_LP>
+                <FOLD_THRESH>5</FOLD_THRESH>
+             </COMPONENT_TYPE_GROUP>
+          </LIB>
+       </COMPONENT_TYPE_GROUPS>
+       <MAPPINGS>
+           <LIB NAME="sky130_fd_pr_main">
+               <CELL NAME="pfet_01v8">
+                   <COMPONENT_TYPE>
+                       <NAME>pmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="pfet_01v8_hvt">
+                   <COMPONENT_TYPE>
+                       <NAME>pmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="pfet_01v8_lvt">
+                   <COMPONENT_TYPE>
+                       <NAME>pmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="pfet_g5v0d10v5">
+                   <COMPONENT_TYPE>
+                       <NAME>pmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="nfet_01v8">
+                   <COMPONENT_TYPE>
+                       <NAME>nmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="nfet_01v8_lvt">
+                   <COMPONENT_TYPE>
+                       <NAME>nmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="nfet_03v3_nvt">
+                   <COMPONENT_TYPE>
+                       <NAME>nmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="nfet_05v0_nvt">
+                   <COMPONENT_TYPE>
+                       <NAME>nmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+               <CELL NAME="nfet_g5v0d10v5">
+                   <COMPONENT_TYPE>
+                       <NAME>nmos</NAME>
+                       <LIB>sky130_fd_pr_main</LIB>
+                   </COMPONENT_TYPE>
+               </CELL>
+           </LIB>
+       </MAPPINGS>
+    </PHYSICAL>
+</LIBRARY_DATA>

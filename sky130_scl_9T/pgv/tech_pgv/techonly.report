@@ -1,0 +1,1098 @@
+
+==============================================================================
+Library path name:		tech_pgv
+Library name:			techonly
+Hierarchical library:		NO
+User login:			chiz
+Date:				2024-Mar-27 15:09:32 (2024-Mar-27 22:09:32 GMT)
+ToolIdentifier: 		VOLTUS
+Application version: 		Voltus Version: 22.12-s082_1 voltus_libGen Version 22.10-XP-2023-04-19.gilberth (04/19/2023 07:40:26)
+Number of cells in library:	188
+==============================================================================
+Cell                PowerNets       Capacitance     PowerGrid Views
+--------------------------------------------------------------------------------------------------------------------------------------------|
+
+NSUBFGR 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+PSUBFGR 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_mim_m3__base 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p4x04p6_m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_l1m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_l1m1m2_shieldpo_floatm3 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_m1m2_noshield_o2 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_m1m2_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_m1m2m3_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_06p8x06p1_m1m2m3_shieldl1m4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_l1m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_l1m1m2_shieldpo_floatm3 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_m1m2_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_m1m2m3_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2_shieldpom3 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2m3_shieldm4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2m3_shieldl1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m2m3m4_shieldm5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+cap_vpp_11p5x11p7_m1m4_noshield 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+diffConn 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nfet_01v8 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nfet_01v8_lvt 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nfet_03v3_nvt 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nfet_05v0_nvt 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nfet_g5v0d10v5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+npn_05v5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+npn_11v0 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+nwellTap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+pfet_01v8 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+pfet_01v8_hvt 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+pfet_01v8_lvt 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+pfet_g5v0d10v5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+pnp_05v5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+polyConn 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_m1 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_m2 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_m3 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_m4 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_m5 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_nd 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_generic_pd 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_high_po_0p35 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_high_po_0p69 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_high_po_1p41 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_high_po_2p85 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_high_po_5p73 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_xhigh_po_0p35 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_xhigh_po_0p69 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_xhigh_po_1p41 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_xhigh_po_2p85 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+res_xhigh_po_5p73 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+subTap 
+ Cell Type = MACRO                                     Cell_Status: FAILED
+Clue: No PowerPin Found in LEF. Check LEF for USE POWER & PORT construct.
+Clue: Check "generic_power_names" command in Libgen.
+Clue: No GroundPin Found in LEF. Check LEF for USE GROUND construct.
+Clue: Check "generic_ground_names" command in Libgen.
+---------------------------------------------------------------------------------------------------------------------| 
+FILL1 
+                    VSS(0.0000)     1.90440e-17          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-17          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL16 
+                    VSS(0.0000)     3.04704e-16          TECH(1 taps)
+                    VDD(1.8000)     3.04704e-16          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL2 
+                    VSS(0.0000)     3.80880e-17          TECH(1 taps)
+                    VDD(1.8000)     3.80880e-17          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL32 
+                    VSS(0.0000)     6.09408e-16          TECH(1 taps)
+                    VDD(1.8000)     6.09408e-16          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL4 
+                    VSS(0.0000)     7.61760e-17          TECH(1 taps)
+                    VDD(1.8000)     7.61760e-17          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL64 
+                    VSS(0.0000)     1.21882e-15          TECH(1 taps)
+                    VDD(1.8000)     1.21882e-15          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL8 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ADDFX1 
+                    VSS(0.0000)     3.23748e-16          TECH(1 taps)
+                    VDD(1.8000)     3.23748e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ADDHX1 
+                    VSS(0.0000)     2.09484e-16          TECH(1 taps)
+                    VDD(1.8000)     2.09484e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND2X1 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND2X2 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND3X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND3X2 
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND4X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND4X2 
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI211X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI211X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI21X1 
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI21X2 
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI221X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI221X2 
+                    VSS(0.0000)     2.47572e-16          TECH(1 taps)
+                    VDD(1.8000)     2.47572e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI222X1 
+                    VSS(0.0000)     1.71396e-16          TECH(1 taps)
+                    VDD(1.8000)     1.71396e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI222X2 
+                    VSS(0.0000)     2.85660e-16          TECH(1 taps)
+                    VDD(1.8000)     2.85660e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI22X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI22X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX16 
+                    VDD(1.8000)     3.80880e-16          TECH(1 taps)
+                    VSS(0.0000)     3.80880e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX2 
+                    VSS(0.0000)     7.61760e-17          TECH(1 taps)
+                    VDD(1.8000)     7.61760e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX4 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX8 
+                    VSS(0.0000)     2.09484e-16          TECH(1 taps)
+                    VDD(1.8000)     2.09484e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKAND2X2 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX2 
+                    VSS(0.0000)     7.61760e-17          TECH(1 taps)
+                    VDD(1.8000)     7.61760e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX4 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX8 
+                    VSS(0.0000)     2.09484e-16          TECH(1 taps)
+                    VDD(1.8000)     2.09484e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX1 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX2 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX4 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX8 
+                    VSS(0.0000)     1.71396e-16          TECH(1 taps)
+                    VDD(1.8000)     1.71396e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKMX2X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKXOR2X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFRX1 
+                    VSS(0.0000)     3.80880e-16          TECH(1 taps)
+                    VDD(1.8000)     3.80880e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFRX4 
+                    VSS(0.0000)     5.14188e-16          TECH(1 taps)
+                    VDD(1.8000)     5.14188e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSRX1 
+                    VSS(0.0000)     4.76100e-16          TECH(1 taps)
+                    VDD(1.8000)     4.76100e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSRX4 
+                    VDD(1.8000)     6.09408e-16          TECH(1 taps)
+                    VSS(0.0000)     6.09408e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSX1 
+                    VSS(0.0000)     3.80880e-16          TECH(1 taps)
+                    VDD(1.8000)     3.80880e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSX4 
+                    VSS(0.0000)     4.95144e-16          TECH(1 taps)
+                    VDD(1.8000)     4.95144e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFX1 
+                    VSS(0.0000)     3.42792e-16          TECH(1 taps)
+                    VDD(1.8000)     3.42792e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFX4 
+                    VDD(1.8000)     4.38012e-16          TECH(1 taps)
+                    VSS(0.0000)     4.38012e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY1X1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY1X4 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY2X4 
+                    VSS(0.0000)     2.85660e-16          TECH(1 taps)
+                    VDD(1.8000)     2.85660e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY4X4 
+                    VSS(0.0000)     4.76100e-16          TECH(1 taps)
+                    VDD(1.8000)     4.76100e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ICGX1 
+                    VSS(0.0000)     2.66616e-16          TECH(1 taps)
+                    VDD(1.8000)     2.66616e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX1 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX16 
+                    VSS(0.0000)     3.04704e-16          TECH(1 taps)
+                    VDD(1.8000)     3.04704e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX2 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX4 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX8 
+                    VSS(0.0000)     1.71396e-16          TECH(1 taps)
+                    VDD(1.8000)     1.71396e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX2X1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX2X4 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX4X1 
+                    VSS(0.0000)     3.04704e-16          TECH(1 taps)
+                    VDD(1.8000)     3.04704e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX4X4 
+                    VSS(0.0000)     3.61836e-16          TECH(1 taps)
+                    VDD(1.8000)     3.61836e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X1 
+                    VSS(0.0000)     7.61760e-17          TECH(1 taps)
+                    VDD(1.8000)     7.61760e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X2 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X4 
+                    VSS(0.0000)     1.71396e-16          TECH(1 taps)
+                    VDD(1.8000)     1.71396e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X1 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X4 
+                    VSS(0.0000)     2.66616e-16          TECH(1 taps)
+                    VDD(1.8000)     2.66616e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X4 
+                    VSS(0.0000)     3.23748e-16          TECH(1 taps)
+                    VDD(1.8000)     3.23748e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X1 
+                    VSS(0.0000)     7.61760e-17          TECH(1 taps)
+                    VDD(1.8000)     7.61760e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X2 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X4 
+                    VSS(0.0000)     1.71396e-16          TECH(1 taps)
+                    VDD(1.8000)     1.71396e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X1 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X4 
+                    VSS(0.0000)     2.66616e-16          TECH(1 taps)
+                    VDD(1.8000)     2.66616e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X4 
+                    VSS(0.0000)     3.23748e-16          TECH(1 taps)
+                    VDD(1.8000)     3.23748e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI211X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI211X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI21X1 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI21X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI221X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI221X2 
+                    VSS(0.0000)     2.47273e-16          TECH(1 taps)
+                    VDD(1.8000)     2.47273e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI222X1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI222X2 
+                    VSS(0.0000)     2.85660e-16          TECH(1 taps)
+                    VDD(1.8000)     2.85660e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI22X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI22X2 
+                    VSS(0.0000)     1.90440e-16          TECH(1 taps)
+                    VDD(1.8000)     1.90440e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR2X1 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR2X2 
+                    VSS(0.0000)     9.52200e-17          TECH(1 taps)
+                    VDD(1.8000)     9.52200e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR3X1 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR3X2 
+                    VSS(0.0000)     1.14264e-16          TECH(1 taps)
+                    VDD(1.8000)     1.14264e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR4X1 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR4X2 
+                    VSS(0.0000)     1.33308e-16          TECH(1 taps)
+                    VDD(1.8000)     1.33308e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFRX1 
+                    VSS(0.0000)     4.76100e-16          TECH(1 taps)
+                    VDD(1.8000)     4.76100e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFRX4 
+                    VSS(0.0000)     6.09408e-16          TECH(1 taps)
+                    VDD(1.8000)     6.09408e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSRX1 
+                    VSS(0.0000)     6.09408e-16          TECH(1 taps)
+                    VDD(1.8000)     6.09408e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSRX4 
+                    VSS(0.0000)     7.04628e-16          TECH(1 taps)
+                    VDD(1.8000)     7.04628e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSX1 
+                    VSS(0.0000)     4.76100e-16          TECH(1 taps)
+                    VDD(1.8000)     4.76100e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSX4 
+                    VSS(0.0000)     5.90364e-16          TECH(1 taps)
+                    VDD(1.8000)     5.90364e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFX1 
+                    VSS(0.0000)     4.38012e-16          TECH(1 taps)
+                    VDD(1.8000)     4.38012e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFX4 
+                    VSS(0.0000)     5.33232e-16          TECH(1 taps)
+                    VDD(1.8000)     5.33232e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX4 
+                    VSS(0.0000)     2.09484e-16          TECH(1 taps)
+                    VDD(1.8000)     2.09484e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX8 
+                    VSS(0.0000)     3.80880e-16          TECH(1 taps)
+                    VDD(1.8000)     3.80880e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TIEHI 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TIELO 
+                    VSS(0.0000)     5.71320e-17          TECH(1 taps)
+                    VDD(1.8000)     5.71320e-17          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TLATSRX1 
+                    VSS(0.0000)     3.61836e-16          TECH(1 taps)
+                    VDD(1.8000)     3.61836e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TLATX1 
+                    VSS(0.0000)     2.85660e-16          TECH(1 taps)
+                    VDD(1.8000)     2.85660e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X4 
+                    VSS(0.0000)     2.28528e-16          TECH(1 taps)
+                    VDD(1.8000)     2.28528e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X1 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X2 
+                    VSS(0.0000)     1.52352e-16          TECH(1 taps)
+                    VDD(1.8000)     1.52352e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X4 
+                    VSS(0.0000)     2.28528e-16          TECH(1 taps)
+                    VDD(1.8000)     2.28528e-16          TECH(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 

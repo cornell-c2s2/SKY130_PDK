@@ -1,0 +1,9 @@
+setenv PEGASUS_LVS to the location of the deck installation which is in the "Sky130_LVS" directory.
+ 
+The variable points to this directory so the dir pointed to by $PEGASUS_LVS  would have the contents:
+   
+   sky130.lvs.pvl
+    
+      
+Run by pointing to the file $PEGASUS_LVS/sky130.lvs.pvl
+

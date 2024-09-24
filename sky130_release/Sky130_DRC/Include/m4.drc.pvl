@@ -1,0 +1,104 @@
+//////////////////////////////////////////////////////////////////
+//                 m4 rules                                     //
+//////////////////////////////////////////////////////////////////
+
+//rule m4.den {
+//    caption "Algorithm should flag errors, for met4, if ANY of the following is true:"
+//    caption "An entire 700x700 window is covered by cmm4 waffleDrop, and metX PD < 70% for same window."
+//    caption "80-100% of 700x700 window is covered by cmm4 waffleDrop, and metX PD < 65% for same window."
+//    caption "60-80% of 700x700 window is covered by cmm4 waffleDrop, and metX PD < 60% for same window."
+//    caption "50-60% of 700x700 window is covered by cmm4 waffleDrop, and metX PD < 50% for same window."
+//    caption "40-50% of 700x700 window is covered by cmm4 waffleDrop, and metX PD < 40% for same window."
+//    caption "30-40% of 700x700 window is covered by cmm4 waffleDrop, and metX PD < 30% for same window."
+//    caption "Exclude cells whose area is below 40Kum2. NOTE: Required for IP, Recommended for Chip-level"
+//    caption "     TBA    "
+//}
+
+rule m4.1 {
+    caption "Width of metal4 >= 0.300 um"
+    inte met4 -lt 0.300
+}
+
+rule m4.2 {
+    caption "Spacing of metal4 to metal4 >= 0.300 um"
+    exte met4 -lt 0.300 -single_point
+}
+
+#IFNDEF Copper
+    rule m4.3 {
+        caption "AL Flow via3 must be enclosed by Met4 by at least >= 0.065 um"
+        enc via3 met4 -lt 0.065
+    }
+#ENDIF // Aluminum
+
+//rule m4.4 {
+//    caption "Min area of met4 (rule exempted for probe pads which are exactly 1.42um by 1.42um)"
+//    caption " NOT CODED with exception as it no longer applies"
+//}
+
+rule m4.4a {
+    caption "Min metal 4 area >= 0.240 sq um"
+    area met4 -lt 0.240
+}
+
+//rule m4.5a {
+//    caption "Min. spacing of features attached to or extending from huge_met4"
+//    caption "for a distance of up to 0.400 μm to metal4 "
+//    caption "(rule not checked over non-huge met4 features)"
+//    caption "   TBA  "
+//}
+
+rule m4.5b {
+    caption "Min. spacing of huge_met4 to metal4 excluding features checked by m4.3c >= 0.400 um"
+    caption "Exclusion TBA"
+    exte huge_met4 met4 -lt 0.400 -single_point
+}
+
+#IFDEF Copper
+    rule m4.7 {
+        caption "Cu Flow - Min area of metal4 holes >= 0.200 sq um"
+        holes met4 -outputlayer m4.7_a
+        area m4.7_a -lt 0.200
+    }
+
+    //rule m4.pd.* {
+    //    caption " TBA "
+    //}
+
+    rule m4.11 {
+        caption "Cu Flow - Max width of metal4 <= 10.000 um"
+        with_width met4 -gt 10.000
+    }
+
+    //rule m4.12 {
+    //    caption "Cu Flow - Add slots and remove vias and contacts if met4 wider than >-3.200"
+    //    caption "   TBA   "
+    //}
+
+    //rule m4.13 {
+    //    caption "Cu Flow - Max pattern density (PD) of met4 <= 0.77"
+    //    caption "   TBA   "
+    //}
+
+    //rule m4.14 {
+    //    caption "Cu Flow - Met3 PD window size == 50.00 um"
+    //    caption "   TBA   "
+    //}
+
+    //rule m4.14a {
+    //    caption "Cu Flow - Met3 PD window step == 25.00 um"
+    //    caption "   TBA   "
+    //}
+
+    rule m4.15 {
+        caption "Cu Flow - via3 must be enclosed by Met4 by at least >= 0.060 um" 
+        enc via3 met4 -lt 0.060
+    }
+
+    rule m4.16 {
+        caption "Cu Flow - Min enclosure of pad by met4 >= 0.850 um"
+        enc pad met4 -lt 0.850
+    }
+#ENDIF // Copper
+
+

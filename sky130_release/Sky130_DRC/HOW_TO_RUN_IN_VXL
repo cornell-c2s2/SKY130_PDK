@@ -1,0 +1,10 @@
+setenv PEGASUS_DRC to the location of the deck installation which is in the "Sky130_DRC" directory.
+ 
+The variable points to this directory so the dir pointed to by $PEGASUS_DRC  would have the contents:
+   
+   sky130_rev_0.0_1.0.drc.pvl
+   Include/*.pvl
+    
+      
+Run by pointing to the file $PEGASUS_DRC/sky130_rev_0.0_1.0.drc.pvl
+

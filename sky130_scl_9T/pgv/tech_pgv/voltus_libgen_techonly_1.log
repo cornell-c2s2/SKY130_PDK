@@ -1,0 +1,49 @@
+
+*** Command file: /tmp/ssv_tmpdir_3686_sMl4fM/voltus_libgen_3686.cmd ***
+setMultiCpuUsage -localCpu 4 -keepLicense true -threadInfo 0
+input_type pr_techonly
+setvar process_sub_conducting_layers true
+setvar output_directory_path tech_pgv
+setvar generate_port_powerview true
+setvar library_name techonly
+setvar tech_file /vols/wfo_devel/projects/reference_SKY130/tech/sky130/quantus/extraction/typical/qrcTechFile
+setvar generate_lef_layermap true
+generic_power_names 1.8 {VDD}
+generic_ground_names 0.0 {VSS}
+cell_decap_area {*} 0.01
+filler_cell_list	{ \
+	FILL64\
+	FILL32\
+	FILL16\
+	FILL8\
+	FILL4\
+	FILL2\
+	FILL1\
+}
+cell_list {*}
+detailed_powerview_cell_list {*}
+setvar default_frequency 200e+06
+oa_library {/vols/wfo_devel/projects/chiz/work130_2024/PGV/sky130_fd_pr_main}
+oa_library {/vols/wfo_devel/projects/chiz/work130_2024/PGV/sky130_scl_9T}
+
+***End of command file.***
+Started PGV Library Generator at 15:07:23 03/27/2024
+
+** INFO:  (VOLTUS_LGEN-3599): Library generation settings: 
+	Mode: TECH 
+	Capacitance: area_cap 
+	Current Distribution: estimation 
+	Grid Port Definition: LEF 
+	Grid Current Sinks: LEF pin 
+	Power Gate: no
+
+** INFO:  (VOLTUS_LGEN-3585): Reading OA Library
+"/vols/wfo_devel/projects/chiz/work130_2024/PGV/sky130_fd_pr_main".
+
+----------------------   FATAL   ----------------------
+** ERROR: (VOLTUS_LGEN-3652): OA Database is not present for
+sky130_fd_pr_main library.
+[ShortDescription::FatalAnlsEms]
+-------------------------------------------------------
+Finished PGV Library Generator at 15:07:40 03/27/2024 (cpu=0:00:00, real=0:00:17, peak mem=0.00MB)
+Current Voltus resource usage: (total cpu=0:00:00, real=0:00:00, mem=0.00MB)

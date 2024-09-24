@@ -1,0 +1,108 @@
+//////////////////////////////////////////////////////////////////
+//                 m1 rules                                     //
+//////////////////////////////////////////////////////////////////
+
+//rule m1.den {
+//    caption "Algorithm should flag errors, for met1, if ANY of the following is true:"
+//    caption "An entire 700x700 window is covered by cmm1 waffleDrop, and metX PD < 70% for same window."
+//    caption "80-100% of 700x700 window is covered by cmm1 waffleDrop, and metX PD < 65% for same window."
+//    caption "60-80% of 700x700 window is covered by cmm1 waffleDrop, and metX PD < 60% for same window."
+//    caption "50-60% of 700x700 window is covered by cmm1 waffleDrop, and metX PD < 50% for same window."
+//    caption "40-50% of 700x700 window is covered by cmm1 waffleDrop, and metX PD < 40% for same window."
+//    caption "30-40% of 700x700 window is covered by cmm1 waffleDrop, and metX PD < 30% for same window."
+//    caption "Exclude cells whose area is below 40Kum2. NOTE: Required for IP, Recommended for Chip-level"
+//    caption "     TBA    "
+//}
+
+rule m1.1 {
+    caption "Width of metal1 >= 0.140 um"
+    inte met1 -lt 0.140
+}
+
+rule m1.2 {
+    caption "Spacing of metal1 to metal1 >= 0.140 um"
+    exte met1 -lt 0.140 -single_point
+}
+
+//rule m1.3a {
+//    caption "Min. spacing of features attached to or extending from huge_met1"
+//    caption "for a distance of up to 0.280 μm to metal1 >= 0.280 um"
+//    caption "(rule not checked over non-huge met1 features)"
+//    caption "   TBA  "
+//}
+
+rule m1.3b {
+    caption "Min. spacing of huge_met1 to metal1 excluding features checked by m1.3a >= 0.280 um"
+    exte huge_met1 met1 -lt 0.280 -single_point
+}
+
+rule m1.4 {
+    caption "Mcon must be enclosed by Met1 by at least >= 0.030 um"
+    caption "(Rule exempted for cell names documented in rule m1.4a)"
+    inside_cell -not mcon s8cell_ee_plus_sseln_a s8cell_ee_plus_sseln_b s8cell_ee_plus_sselp_a s8cell_ee_plus_sselp_b s8fpls_pl8 s8fs_cmux4_fm -outputlayer m1.4_a
+    enc m1.4_a met1 -lt 0.030
+}
+
+rule m1.4a {
+    caption "Mcon must be enclosed by Met1 by at least >= 0.005"
+    caption “(for cell names s8cell_ee_plus_sseln_a, s8cell_ee_plus_sseln_b, s8cell_ee_plus_sselp_a,"
+    caption “s8cell_ee_plus_sselp_b, s8fpls_pl8, and s8fs_cmux4_fm)"
+    inside_cell mcon s8cell_ee_plus_sseln_a s8cell_ee_plus_sseln_b s8cell_ee_plus_sselp_a s8cell_ee_plus_sselp_b s8fpls_pl8 s8fs_cmux4_fm -outputlayer m1.4a_a
+    enc m1.4a_a met1 -lt 0.005
+}
+
+#IFNDEF Copper
+    rule m1.5 {
+        caption "AL Flow - Mcon must be enclosed by Met1 on one of two adjacent sides by at least >= 0.060 um" 
+        rect_enc mcon met1 -good 0.060 0.000 0.060 0.000
+    }
+#ENDIF
+
+rule m1.6 {
+    caption "Min metal 1 area >= 0.083 sq um"
+    area met1 -lt 0.083
+}
+
+rule m1.7 {
+    caption "Min area of metal1 holes >= 0.140 sq um"
+    holes met1 -outputlayer m1.7_a
+    area m1.7_a -lt 0.140
+}
+
+//rule m1.pd.* {
+//    caption " TBA "
+//}
+
+//rule m1.11 {
+//    caption "Max width of metal1after slotting >= 4.000 um"
+//    caption "   TBA   "
+//}
+
+//rule m1.12 {
+//    caption "Add slots and remove vias and contacts if met1 wider than >-3.200"
+//    caption "   TBA   "
+//}
+
+//rule m1.13 {
+//    caption "Max pattern density (PD) of met1 <= 0.77"
+//    caption "   TBA   "
+//}
+
+//rule m1.14 {
+//    caption "Met1 PD window size == 50.00 um"
+//    caption "   TBA   "
+//}
+
+//rule m1.14a {
+//    caption "Met1 PD window step == 25.00 um"
+//    caption "   TBA   "
+//}
+
+#IFDEF Copper
+    rule m1.15 {
+        caption "Cu Flow - Mcon must be enclosed by Met1 on one of two adjacent sides by at least >= 0.030 um" 
+        rect_enc mcon met1 -good 0.030 0.000 0.030 0.000
+    }
+#ENDIF // If Copper
+
+

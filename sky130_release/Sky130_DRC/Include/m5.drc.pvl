@@ -1,0 +1,29 @@
+//////////////////////////////////////////////////////////////////
+//                 m5 rules                                     //
+//////////////////////////////////////////////////////////////////
+
+rule m5.1 {
+    caption "Width of metal5 >= 1.600 um"
+    inte met5 -lt 1.600
+}
+
+rule m5.2 {
+    caption "Spacing of metal5 to metal5 >= 1.600 um"
+    exte met5 -lt 1.600 -single_point
+}
+
+#IFNDEF Copper
+    rule m5.3 {
+        caption "AL Flow via4 must be enclosed by Met5 by at least >= 0.310 um"
+        enc via4 met5 -lt 0.310
+    }
+#ENDIF // Copper
+
+rule m5.4 {
+    caption "Min area of met5 >= 4.000 sq um"
+    caption "(rule exempted for probe pads which are exactly 1.42um by 1.42um)"
+    caption " NOT CODED with exception as it no longer applies"
+    area met5 -lt 4.000
+}
+
+

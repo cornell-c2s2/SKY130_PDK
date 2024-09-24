@@ -1,0 +1,29 @@
+//nsm Rules//
+
+
+rule nsm.1 {
+	caption "Min. width of nsm >= 3.000 um"
+	inte nsm -lt 3.000 -single_point
+}
+
+rule nsm.2 {
+	caption "Min. spacing of nsm to nsm >= 4.000 um"
+	exte nsm nsm -lt 4.000 -single_point
+}
+
+//rule nsm.3 {
+//	caption "Min spacing, no overlap, between NSM_keepout to diff.dg, tap.dg, fom.dy, cfom.dg, cfom.mk, poly.dg, p1m.mk, li1.dg, cli1m.mk, metX.dg (X=1 to 5) and cmmX.mk (X=1 to 5). Exempt the following from the check: (a) cell name “nikon*” and (b) diff ring inside areaid.sl >= 1.000 um"
+//	caption "NEED TO BE CODED"
+//}
+
+//rule nsm.3a {
+//	caption "Min enclosure of diff.dg, tap.dg, fom.dy, cfom.dg, cfom.mk, poly.dg, p1m.mk, li1.dg, cli1m.mk, metX.dg (X=1 to 5) and cmmX.mk (X=1 to 5) by areaid.ft. Exempt the following from the check: (a) cell name “s8Fab_crntic*” (b) blankings in the frame (rule uses areaid.dt for exemption) >= 3.000 um"
+//	caption "NEED TO BE CODED"
+//}
+
+//rule nsm.3b {
+//	caption "Min spacing between areaid.dt to diff.dg, tap.dg, fom.dy, cfom.dg, cfom.mk, poly.dg, p1m.mk, li1.dg, cli1m.mk, metX.dg (X=1 to 5) and cmmX.mk (X=1 to 5). Exempt the following from the check: (a) blankings in the frame (rule uses areaid.dt for exemption) >= 3.000 um"
+//	caption "NEED TO BE CODED"
+//}
+
+

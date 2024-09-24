@@ -1,0 +1,594 @@
+
+==============================================================================
+Library path name:		stdcell_pgv
+Library name:			stdcells
+Hierarchical library:		NO
+User login:			chiz
+Date:				2024-Mar-27 15:36:15 (2024-Mar-27 22:36:15 GMT)
+ToolIdentifier: 		VOLTUS
+Application version: 		Voltus Version: 22.12-s082_1 voltus_libGen Version 22.10-XP-2023-04-19.gilberth (04/19/2023 07:40:26)
+Number of cells in library:	116
+==============================================================================
+Cell                PowerNets       Capacitance     PowerGrid Views
+--------------------------------------------------------------------------------------------------------------------------------------------|
+
+FILL1 
+                    VSS(0.0000)     1.90440e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL16 
+                    VSS(0.0000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL2 
+                    VSS(0.0000)     3.80880e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.80880e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL32 
+                    VSS(0.0000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL4 
+                    VSS(0.0000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL64 
+                    VSS(0.0000)     1.21882e-15          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.21882e-15          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+FILL8 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = FILLER CELL(NOLOGIC)                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ADDFX1 
+                    VSS(0.0000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ADDHX1 
+                    VSS(0.0000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND2X1 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND2X2 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND3X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND3X2 
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND4X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AND4X2 
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI211X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI211X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI21X1 
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI21X2 
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI221X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI221X2 
+                    VSS(0.0000)     2.47572e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.47572e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI222X1 
+                    VSS(0.0000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI222X2 
+                    VSS(0.0000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI22X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+AOI22X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX16 
+                    VDD(1.8000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX2 
+                    VSS(0.0000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX4 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+BUFX8 
+                    VSS(0.0000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKAND2X2 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX2 
+                    VSS(0.0000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX4 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKBUFX8 
+                    VSS(0.0000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX1 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX2 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX4 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKINVX8 
+                    VSS(0.0000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKMX2X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+CLKXOR2X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFRX1 
+                    VSS(0.0000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFRX4 
+                    VSS(0.0000)     5.14188e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.14188e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSRX1 
+                    VSS(0.0000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSRX4 
+                    VDD(1.8000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSX1 
+                    VSS(0.0000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFSX4 
+                    VSS(0.0000)     4.95144e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.95144e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFX1 
+                    VSS(0.0000)     3.42792e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.42792e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DFFX4 
+                    VDD(1.8000)     4.38012e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VSS(0.0000)     4.38012e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY1X1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY1X4 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY2X4 
+                    VSS(0.0000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+DLY4X4 
+                    VSS(0.0000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+ICGX1 
+                    VSS(0.0000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX1 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX16 
+                    VSS(0.0000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX2 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX4 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+INVX8 
+                    VSS(0.0000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX2X1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX2X4 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX4X1 
+                    VSS(0.0000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.04704e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+MX4X4 
+                    VSS(0.0000)     3.61836e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.61836e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X1 
+                    VSS(0.0000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X2 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND2X4 
+                    VSS(0.0000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X1 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND3X4 
+                    VSS(0.0000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NAND4X4 
+                    VSS(0.0000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X1 
+                    VSS(0.0000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.61760e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X2 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR2X4 
+                    VSS(0.0000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.71396e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X1 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR3X4 
+                    VSS(0.0000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.66616e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+NOR4X4 
+                    VSS(0.0000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.23748e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI211X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI211X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI21X1 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI21X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI221X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI221X2 
+                    VSS(0.0000)     2.47273e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.47273e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI222X1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI222X2 
+                    VSS(0.0000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI22X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OAI22X2 
+                    VSS(0.0000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.90440e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR2X1 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR2X2 
+                    VSS(0.0000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     9.52200e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR3X1 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR3X2 
+                    VSS(0.0000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.14264e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR4X1 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+OR4X2 
+                    VSS(0.0000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.33308e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFRX1 
+                    VSS(0.0000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFRX4 
+                    VSS(0.0000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSRX1 
+                    VSS(0.0000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     6.09408e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSRX4 
+                    VSS(0.0000)     7.04628e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     7.04628e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSX1 
+                    VSS(0.0000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.76100e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFSX4 
+                    VSS(0.0000)     5.90364e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.90364e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFX1 
+                    VSS(0.0000)     4.38012e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     4.38012e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+SDFFX4 
+                    VSS(0.0000)     5.33232e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.33232e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX4 
+                    VSS(0.0000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.09484e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TBUFX8 
+                    VSS(0.0000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.80880e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TIEHI 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TIELO 
+                    VSS(0.0000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     5.71320e-17          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TLATSRX1 
+                    VSS(0.0000)     3.61836e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     3.61836e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+TLATX1 
+                    VSS(0.0000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.85660e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XNOR2X4 
+                    VSS(0.0000)     2.28528e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.28528e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X1 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X2 
+                    VSS(0.0000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     1.52352e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 
+XOR2X4 
+                    VSS(0.0000)     2.28528e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+                    VDD(1.8000)     2.28528e-16          EARLY(1 taps) EM(1 taps) IR(1 taps)
+ Cell Type = STDCELL                                     Cell_Status: PASS
+---------------------------------------------------------------------------------------------------------------------| 

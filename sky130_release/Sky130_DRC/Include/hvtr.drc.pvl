@@ -1,0 +1,18 @@
+//hvtr Rules//
+
+
+rule hvtr.1 {
+	caption "Min width of hvtr >= 0.380 um"
+	inte hvtr -lt 0.380 -single_point
+}
+	
+rule hvtr.2 {
+	caption "Min spacing between hvtp to hvtr >= 0.380 um"
+	exte hvtp hvtr -lt 0.380 -single_point
+}
+
+rule hvtr.3 {
+	caption "Min enclosure of pfet by hvtr >= 0.180 um"
+	enc pfet hvtr -lt 0.180
+}
+

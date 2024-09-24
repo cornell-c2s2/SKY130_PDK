@@ -1,0 +1,77 @@
+//denmos Rules//
+
+
+rule denmos.1 {
+	caption "Min width of de_nFet_gate >= 1.055 um" 
+	inte de_nFet_gate -lt 1.055 -single_point
+}
+
+rule denmos.2 {
+	caption "Min width of de_nFet_source not overlapping poly >= 0.280 um"
+	inte de_nFet_source -lt 0.280 -single_point
+}
+
+rule denmos.3 {
+	caption "Min width of de_nFet_source overlapping poly >= 0.925 um"
+	inte de_nFet_source -lt 0.925 -single_point
+}
+
+rule denmos.4 {
+	caption "Min width of the de_nFet_drain >= 0.170 um"
+	inte de_nFet_drain -lt 0.170 -single_point
+}
+
+rule denmos.5 {
+	caption "Min/Max extension of de_nFet_source over nwell == 0.225"
+	inte de_nFet_source -eq 0.225
+}
+
+rule denmos.6 {
+	caption "Min/Max spacing between de_nFet_drain and de_nFet_source == 1.585 um"
+	exte de_nFet_drain de_nFet_source -eq 1.585 -single_point
+}
+
+rule denmos.7 {
+	caption "Min channel width for de_nFet_gate >= 5.000 um"
+	inte de_nFet_gate -lt 5.000 -single_point
+}
+
+rule denmos.8 {
+	caption "90 degree angles are not permitted for nwell overlapping de_nFET_drain"
+//djb	select -interact -not nwell de_nFET_drain -outputlayer denmos.8_a
+        and nwell de_nFET_drain -outputlayer denmos.8_a
+//djb	angle -not denmos.8_a -eq 90
+        rect_chk -not -orthogonal_only denmos.8_a
+}
+	
+//rule denmos.9a {
+//	caption "All bevels on nwell are 45 degree, 0.43 µm from corners"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule denmos.9b {
+//	caption "All bevels on de_nFet_drain are 45 degree, 0.05 µm from corners"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule denmos.10 {
+	caption "Min enclosure of de_nFet_drain by nwell >= 0.660 um"
+	enc de_nFet_drain nwell -lt 0.660
+}
+
+rule denmos.11 {
+	caption "Min spacing between p+ tap and (nwell overlapping de_nFet_drain) >= 0.860 um"
+	exte tap de_nFet_drain -lt 0.860 -single_point
+}
+
+rule denmos.12 {
+	caption "Min spacing between nwells overlapping de_nFET_drain >= 2.400 um"
+	exte nwell de_nFET_drain -lt 2.400 -single_point
+}
+
+rule denmos.13 {
+	caption "de_nFet_source must be enclosed by nsdm by >= 0.130 um"
+	enc de_nFet_source nsdm -lt 0.130
+//	and de_nFet_source -outputlayer denmos.13_a
+//	enc denmos.13_a nsdm -lt 0.130
+}

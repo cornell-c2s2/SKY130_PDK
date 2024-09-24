@@ -1,0 +1,34 @@
+//rdl Rules//
+
+
+rule rdl.1 {
+	caption "Min width of rdl >= 10 um"
+	inte rdl -lt 10 -single_point
+}
+
+rule rdl.2 {
+	caption "Min spacing between two rdl >= 10 um"
+	exte rdl -lt 10 -single_point
+}
+
+//rule rdl.3 {
+//	caption "Min enclosure of pad by rdl, except rdl interacting with bump >= 10.750 um"
+//	enc pad by rdl -lt 10.750
+//}
+
+//rule rdl.4 {
+//	caption "Min spacing between rdl and outer edge of the seal ring >= 15.000 um" 
+//	caption "No exact information provided"
+//}
+
+//rule rdl.5 {
+//	caption "(rdl OR ccu1m.mk) must not overlap areaid.ft. Exempt the following from the check: (a) blankings in the frame (rule uses areaid.dt for exemption)"
+//	caption "NOT CODED Informational Only"
+//}
+
+//rule rdl.6 {
+//	caption "Min spacing of rdl to pad, except rdl interacting with bump >= 19.660 um"
+//	caption "Had a confusion between rdl3 and this rule"	
+//	enc rdl by pad -lt 19.660
+//}
+	

@@ -1,0 +1,91 @@
+//vpp Rules//
+
+
+rule vpp.1 {
+	caption "Min width of capacitor:dg >= 1.430 um"
+	inte capacitor_in -lt 1.430 -single_point
+}
+	
+rule vpp.1b {
+	caption "Max width of capacitor:dg, Rule not applicable for vpp_with_Met3Shield and vpp_with_LiShield and vpp_over_MOSCAP and vpp_with_Met5 and vpp_with_noLi <= 11.350 um"
+	with_width capacitor_in -gt 11.350
+}
+
+//rule vpp.1c {
+//	caption "Min/Max width of cell name “s8rf_xcmvpp1p8x1p8_m3shield “ = 3.880 um"
+//	inte s8rf_xcmvpp1p8x1p8_m3shield -eq 3.880 -single_point
+//}
+
+rule vpp.3 {
+	caption "capacitor:dg must not overlap (tap or diff or poly), (one exception: Poly is allowed to overlap vpp_with_Met3Shield and vpp_with_Met5PolyShield), (not applicable for vpp_over_Moscap or “s8rf2_xcmvppx4_2xnhvnative10x4” or vpp_with_LiShield)"
+	or tap diff poly -outputlayer vpp.3_a
+	and capacitor_in vpp.3_a
+}
+
+rule vpp.4 {
+	caption "capacitor:dg must not straddle (nwell or dnwell)"
+	or nwell dnwell -outputlayer vpp.4_a
+	select -cut capacitor_in vpp.4_a
+}
+
+rule vpp.5 {
+	caption "Min spacing between (capacitor:dg edge and (poly or li1 or met1 or met2)) to (poly or li1 or met1 or met2) on separate nets (Exempt area of the error shape less than 2.25 µm² and run length less than 2.0um), Rule not applicable for vpp_with_Met3Shield and vpp_with_LiShield and vpp_over_MOSCAP and vpp_with_Met5 and vpp_with_noLi >= 1.500 um"
+	or poly li1 met1 met2 -outputlayer vpp.5_a
+        stamp vpp.5_a poly -outputlayer vpp.5_b
+        and vpp.5_b capacitor_in -outputlayer vpp.5_c
+	exte vpp.5_b vpp.5_c -lt 1.500 -not_connected -single_point
+}
+
+rule vpp.8 {
+	caption "Min enclosure of capacitor:dg by nwell >= 1.500 um"
+	enc capacitor_in nwell -lt 1.500
+}
+
+rule vpp.9 {
+	caption "Min spacing of capacitor:dg to nwell (not applicable for vpp_over_MOSCAP) >= 1.500 um"
+	exte capacitor_in nwell -lt 1.500 -single_point
+}
+
+//rule vpp.10 {
+//	caption "vpp capacitors must not overlap, Rule checks for capacitor.dg overlapping more than one pwell pin"
+//	select -touch capacitor_in pwell -outputlayer vpp.10_a
+//	edge_boolean -coincident_only -inside capacitor_in pwell -outputlayer vpp.10_a 
+//}
+
+//rule vpp.12a {
+//	caption "Number of met4 shapes inside capacitor.dg of cell “s8rf2_xcmvpp8p6x7p9_m3_lim5shield” must overlap with size 2.01 x 2.01 (no other met4 shapes allowed) = 9.00 um"
+//	caption "NEED TO BE CODED"
+//}
+	
+//rule vpp.12b {
+//	caption "Number of met4 shapes inside capacitor.dg of cell “s8rf2_xcmvpp11p5x11p7_m3_lim5shield” must overlap with size 2.01 x 2.01 (no other met4 shapes allowed) = 16.00 um "
+//	caption "NEED TO BE CODED"
+//}
+
+//rule vpp.12c {
+//	caption "Number of met4 shapes inside capacitor.dg of cell “s8rf2_xcmvpp4p4x4p6_m3_lim5shield” must overlap with size 1.5 x 1.5 (no other met4 shapes allowed) = 4.00 um"
+//	caption "NEED TO BE CODED"
+//}
+
+rule vpp.13 {
+	caption "Min space of met1 to met1inside VPP capacitor >= 0.160 um"
+//djb	and met1 capacitor_in -outputlayer vpp.13_a
+//djb        extent_cell "cap_vpp*" -outputlayer vpp.13_a
+//djb        and met1 vpp.13_a -outputlayer vpp.13_b
+        select -interact met1 capacitor_in -outputlayer vpp.13_a
+        not met1 vpp.13_a -outputlayer vpp.13_b
+	exte vpp.13_a vpp.13_b -lt 0.160 -single_point
+}
+
+rule vpp.14 {
+	caption "Min space of met2 to met2 inside VPP capacitor >= 0.160 um"
+//djb	and met2 capacitor_in -outputlayer vpp.14_a
+//djb        extent_cell "cap_vpp*" -outputlayer vpp.14_a
+//djb        and met2 vpp.14_a -outputlayer vpp.14_b
+        select -interact met2 capacitor_in  -outputlayer vpp.14_a
+        not met2 vpp.14_a -outputlayer vpp.14_b
+	exte vpp.14_a vpp.14_b -lt 0.160 -single_point
+}
+
+
+

@@ -1,0 +1,49 @@
+//varac Rules//
+
+
+rule varac.1 {	
+	caption "Min channel length (poly width) of Var_channel >= 0.180 um"
+	and poly Var_channel -outputlayer varac.1_a
+	inte varac.1_a -lt 0.180
+//	inte Var_channel -lt 0.180
+}
+
+rule varac.2 {
+	caption "Min channel width (tap width) of Var_channel >= 1.000 um"
+	and tap Var_channel -outputlayer varac.2_a
+	inte varac.2_a -lt 1.000
+}
+
+rule varac.3 {
+	caption "Min spacing between hvtp to Var_channel >= 0.180 um"
+	exte hvtp Var_channel -lt 0.180 -single_point
+}
+
+rule varac.4 {
+	caption "Min spacing of licon on tap to Var_channel >= 0.250 um"
+	exte licon1 Var_channel -lt 0.250 -single_point
+}
+
+rule varac.5 {
+	caption "Min enclosure of poly overlapping Var_channel by nwell >= 0.150 um"
+	select -cut poly Var_channel -outputlayer varac.5_a
+	enc varac.5_a nwell -lt 0.150
+}
+
+//rule varac.6 {
+//	caption "Min spacing between VaracTap and difftap >= 0.270 um"
+//	exte VaracTap difftap -lt 0.270 -single_point
+//}
+
+rule varac.7 {
+	caption "Nwell overlapping Var_channel must not overlap P+ diff"
+	select -cut nwell Var_channel -outputlayer varac.7_a
+	and varac.7_a pdiff 
+}
+
+rule varac.8 {
+	caption "Min enclosure of Var_channel by hvtp >= 0.255"
+	enc Var_channel hvtp -lt 0.255
+}
+
+

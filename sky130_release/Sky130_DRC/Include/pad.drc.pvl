@@ -1,0 +1,17 @@
+//////////////////////////////////////////////////////////////////
+//                 pad rules                                    //
+//////////////////////////////////////////////////////////////////
+
+rule pad.2 {
+    caption "Spacing of pad to pad >= 1.270 um"
+    exte pad -lt 1.270 -single_point
+}
+
+rule pad.3 {
+    caption "Min area of hugePad NOT top_metal >= 30000 sq um"
+    caption " Adjust top_metal based on final process type"
+    not hugePad met5 -outputlayer pad.3a
+    area pad.3a -lt 30000
+}
+
+

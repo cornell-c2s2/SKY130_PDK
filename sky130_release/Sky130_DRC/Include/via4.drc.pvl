@@ -1,0 +1,43 @@
+//////////////////////////////////////////////////////////////////
+//                 via4 rules                                   //
+//////////////////////////////////////////////////////////////////
+
+rule via4.1 {
+    caption "Min and max L and W of via4 == 0.800 um"
+    rect_chk -not via4 -eq 0.800
+}
+
+rule via4.2 {
+    caption "Spacing of via4 to via4 >= 0.800 um"
+    exte via4 -lt 0.800 -single_point
+}
+
+//rule via4.3 {
+//    caption "Only min. square via4 are allowed except die seal ring where via4 are (Via4 CD)*L == 1.600 um"
+//    caption "    TBA   "
+//}
+
+#IFDEF Copper
+    rule via4.4 {
+        caption "Cu Flow - Via4 must be enclosed by Met4 by at least >= 0.190 um"
+        enc via4 met4 -lt 0.190 -outside_also
+    }
+
+    //rule via4.irdrc.1 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via4.irdrc.2 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via4.irdrc.3 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via4.irdrc.4 {
+    //    caption "    TBA   "
+    //}
+#ENDIF // Copper
+
+

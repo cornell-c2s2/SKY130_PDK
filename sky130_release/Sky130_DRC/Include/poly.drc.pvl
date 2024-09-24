@@ -1,0 +1,108 @@
+//////////////////////////////////////////////////////////////////
+//                  poly rules                                  //
+//////////////////////////////////////////////////////////////////
+
+//rule poly.X.1 {
+//    caption "All FETs would be checked for W/Ls as documented in spec 001-02735"
+//    caption "Exempt FETs that are pruned exempt for W/Ls inside areaid.sc"
+//    caption "and inside cell name scs8*decap* and listed in the MRGA as a decap only W/L"
+//    caption "NOT CHECKED Informational Only
+//}
+
+//rule poly.X.1a {
+//    caption "Min & max dummy_poly L is equal to min L allowed for corresponding device type"
+//    caption "(exempt rule for dummy_poly in cells listed on Table H3)"
+//    caption " NOT CHECKED Informational Only"
+//}
+
+rule poly.1a {
+    caption "Width of poly >= 0.150 um"
+    inte poly -lt 0.150
+}
+
+rule poly.1b {
+    caption "Min channel length (poly width) for pfet overlapping lvtn >= 0.350 um"
+    caption "(exempt rule for dummy_poly in cells listed on Table H3)"
+    select -cut pfet lvtn -outputlayer poly.1b_a
+    inte poly.1b_a -lt 0.350
+}
+
+rule poly.2 {
+    caption "Spacing of poly to poly except for poly.c2 and poly.c3 >= 0.210 um"
+    caption "Exempt cell: sr_bltd_eq where it is same as poly.c2"
+    exte poly -lt 0.210 -single_point
+}
+
+//rule poly.3 {
+//    caption "Min poly resistor width >= 0.330 um"
+//    caption "Not yet coded"
+//}
+
+rule poly.4 {
+    caption "Spacing of poly on field to diff (parallel edges only) >= 0.075 um"
+    not poly diff -outputlayer poly.4_a
+    exte poly.4_a diff -lt 0.075 -para only 
+}
+
+rule poly.5 {
+    caption "Spacing of poly on field to tap >= 0.055 um"
+    not poly diff -outputlayer poly.5_a
+    exte poly.5_a tap -lt 0.055 -single_point
+}
+
+rule poly.6 {
+    caption "Spacing of poly on diff to abutting tap (min source) >= 0.300 um"
+    select -touch tap diff -outputlayer poly.6_a
+    exte gate poly.6_a -lt 0.300
+}
+
+rule poly.7 {
+    caption "Extension of diff beyond poly (min drain) >= 0.250 um"
+    enc gate diff -lt 0.250 -outputlayer poly.7_a
+    not diff gate -outputlayer poly.7_b
+    select -touch poly.7_b tap -outputlayer poly.7_c
+    not poly.7_b poly.7_c -outputlayer poly.7_d
+    edge_boolean -coincident_only poly.7_a poly.7_d
+}
+
+rule poly.8 {
+    caption "Extension of poly beyond diffusion (endcap) >= 0.130 um"
+    enc gate poly -lt 0.130 
+}
+
+//rule poly.9 {
+//    caption "Poly resistor spacing to poly or spacing (no overlap) to diff/tap >= 0.480 um"
+//    caption "Not Yet Coded"
+//}
+
+rule poly.10 {
+    caption "Poly can’t overlap inner corners of diff"
+    exte diff -lt 0.002 -abut lt 90 -output region -outputlayer poly.10_a
+    and poly poly.10_a
+}
+
+rule poly.11 {
+    caption "No 90 deg turns of poly on diff"
+    rect_chk gate -orthogonal_only -not 
+}
+
+rule poly.12 {
+    caption "(Poly NOT (nwell NOT hvi)) may not overlap tap"
+    caption "Rule exempted for gated_npn and inside UHVI."
+    not nwell hvi -outputlayer poly.12_a
+    not poly poly.12_a -outputlayer poly.12_b
+    select -donut -not poly.12_b -outputlayer poly.12_c
+    and poly.12_c tap
+}
+
+rule poly.15 {
+    caption "Poly must not overlap diff"
+    and poly diff_res
+}
+
+//rule poly.16 {
+//    caption "Inside RF FETs defined in Table H5, poly cannot overlap poly across multiple adjacent instances"
+//    caption "Not Yet Coded"
+//}
+
+

@@ -1,0 +1,67 @@
+//////////////////////////////////////////////////////////////////
+//                  Nwell Rules                                 //
+//////////////////////////////////////////////////////////////////
+
+rule nwell.1 {
+    caption "Width of nwell >= 0.840 um"
+    inte nwell -lt 0.840
+}
+
+rule nwell.2ab {
+    caption "2a - Spacing between two n-wells >= 1.270 um"
+    caption "2b - Manual merge wells if less than minimum"
+    exte nwell -lt 1.270 -notch also -single_point
+}
+
+rule nwell.4 {
+    caption "All n-wells will contain metal-contacted tap"
+    caption "(rule checks only for licon1 on tap)."
+    caption "Rule exempted from high voltage cells inside UHVI"
+    select -enclose -not nwell tap_licon
+}
+
+rule nwell.5 {
+    caption "Deep nwell must be enclosed by nwell by atleast >= 0.400 um"
+    caption "Exempted inside UHVI or areaid.lw"
+    caption "Nwells can merge over deep nwell if spacing too small (as in rule nwell.2)"
+    caption "areaid.lw exemption not coded, areaid.lw not in drm"
+    inside_cell -not nwell "*_tech_CD_top" -outputlayer nwell.5_a
+    not uhvi dnwell -outputlayer nwell.5_b
+    enc nwell.5_b nwell -lt 0.400
+}
+
+//rule nwell.5a {
+//    caption "min enclosure of nwell by dnwell inside UHVI"
+//    caption "No value yet"
+//}
+    
+//rule nwell.5b {
+//    caption "nwell inside UHVI must not be on the same net as nwell outside UHVI"
+//    caption " To Be Coded"
+//}
+
+rule nwell.6 {
+    caption "Min enclosure of nwell hole by deep nwell outside UHVI >= 1.030 um"
+    caption "shapes in cell "*_tech_CD_top" exempted"
+    inside_cell -not nwell "*_tech_CD_top" -outputlayer nwell.6_a
+    select -outside nwell.6_a uhvi -outputlayer nwell.6_b
+    holes nwell.6_b -outputlayer nwell.6_c
+    enc nwell.6_c dnwell -lt 1.030
+}
+
+//rule nwell.7 {
+//    caption "Min spacing between nwell and deep nwell on separate nets >= 4.500"
+//    caption "Spacing between nwell and deep nwell on the same net is set"
+//    caption "by the sum of the rules nwell.2 and nwell.5"
+//    caption "By default, DRC run on a cell checks for the separate-net spacing,"
+//    caption "when nwell and deep nwell nets are separate within the cell hierarchy"
+//    caption "and are joined in the upper hierarchy."
+//    caption "To allow net names to be joined and make the same-net rule applicable"
+//    caption "in this case, the “joinNets” switch should be turned on. waffle_chip"
+//    caption "shapes in cell "*_tech_CD_top" exempted"
+//    caption "   TBA  "
+//    inside_cell -not nwell "*_tech_CD_top" -outputlayer nwell.7_a
+//    exte nwell.7_a dnwell -lt 4.500 -not_connected 
+//}
+
+

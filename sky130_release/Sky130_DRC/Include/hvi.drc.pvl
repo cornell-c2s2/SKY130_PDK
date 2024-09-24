@@ -1,0 +1,27 @@
+//hvi Rules//
+
+
+rule hvi.1 {
+	caption "Min width of Hvi >= 0.600 um"
+	inte hvi -lt 0.600 -single_point
+}
+
+rule hvi.2a {
+	caption "Min spacing of Hvi to Hvi >= 0.700 um"
+	exte hvi hvi -lt 0.700 -single_point
+}
+
+//rule hvi.2b {
+//	caption "Manual merge if space is below minimum"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule hvi.4 {
+	caption "Hvi must not overlap tunm"
+	and hvi tunm
+}
+
+rule hvi.5 {
+	caption "Min space between hvi and nwell (exclude coincident edges) >= 0.700 um"
+	exte hvi nwell -lt 0.700 -single_point
+}

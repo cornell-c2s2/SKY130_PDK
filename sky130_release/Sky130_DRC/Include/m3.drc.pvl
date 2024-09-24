@@ -1,0 +1,117 @@
+//////////////////////////////////////////////////////////////////
+//                 m3 rules                                     //
+//////////////////////////////////////////////////////////////////
+
+//rule m3.den {
+//    caption "Algorithm should flag errors, for met3, if ANY of the following is true:"
+//    caption "An entire 700x700 window is covered by cmm3 waffleDrop, and metX PD < 70% for same window."
+//    caption "80-100% of 700x700 window is covered by cmm3 waffleDrop, and metX PD < 65% for same window."
+//    caption "60-80% of 700x700 window is covered by cmm3 waffleDrop, and metX PD < 60% for same window."
+//    caption "50-60% of 700x700 window is covered by cmm3 waffleDrop, and metX PD < 50% for same window."
+//    caption "40-50% of 700x700 window is covered by cmm3 waffleDrop, and metX PD < 40% for same window."
+//    caption "30-40% of 700x700 window is covered by cmm3 waffleDrop, and metX PD < 30% for same window."
+//    caption "Exclude cells whose area is below 40Kum2. NOTE: Required for IP, Recommended for Chip-level"
+//    caption "     TBA    "
+//}
+
+rule m3.1 {
+    caption "Width of metal3 >= 0.300 um"
+    inte met3 -lt 0.300
+}
+
+rule m3.2 {
+    caption "Spacing of metal3 to metal3 >= 0.300 um"
+    exte met3 -lt 0.300 -single_point
+}
+
+//rule m3.3a {
+//    caption "Min. spacing of features attached to or extending from huge_met3"
+//    caption "for a distance of up to 0.480 μm to metal3 "
+//    caption "(rule not checked over non-huge met3 features)"
+//    caption "   TBA  "
+//}
+
+//rule m3.3b {
+//    caption "Min. spacing of huge_met3 to metal3 excluding features checked by m3.3a "
+//}
+
+//rule m3.3c {
+//    caption "Min. spacing of features attached to or extending from huge_met3"
+//    caption "for a distance of up to 0.400 μm to metal2 >= 0.400 um"
+//    caption "(rule not checked over non-huge met2 features)"
+//    caption "   TBA  "
+//}
+
+rule m3.3d {
+    caption "Min. spacing of huge_met3 to metal3 excluding features checked by m3.3c >= 0.400 um"
+    exte huge_met3 met3 -lt 0.400 -single_point
+}
+
+#IFNDEF Copper
+    rule m3.4 {
+        caption "AL Flow via2 must be enclosed by Met3 by at least >= 0.065 um"
+        enc via2 met3 -lt 0.065
+    }
+#ENDIF // Alumimum
+
+//rule m3.5 {
+//    caption "via2 must be enclosed by Met3 on one of two adjacent sides by at least " 
+//    caption "    TBA   "
+//}
+
+//rule m3.5a {
+//    caption "Via2 must be enclosed by Met3 on all sides by at least"
+//    caption "(Rule not checked on a layout when it satisfies both rules m3.4 and m3.5)"
+//    caption "     TBA    "
+//}
+
+rule m3.6 {
+    caption "Min metal 3 area >= 0.240 sq um"
+    area met3 -lt 0.240
+}
+
+#IFDEF Copper
+    rule m3.7 {
+        caption "Cu Flow - Min area of metal3 holes >= 0.200 sq um"
+        holes met3 -outputlayer m3.7_a
+        area m3.7_a -lt 0.200
+    }
+#ENDIF // Copper
+
+//rule m3.pd.* {
+//    caption " TBA "
+//}
+
+#IFDEF Copper
+    rule m3.11 {
+        caption "Cu Flow - Max width of metal3 <= 4.000 um"
+        with_width met3 -gt 4.000
+    }
+
+    //rule m3.12 {
+    //    caption "Cu Flow - Add slots and remove vias and contacts if met3 wider than >-3.200"
+    //    caption "   TBA   "
+    //}
+
+    //rule m3.13 {
+    //    caption "Cu Flow - Max pattern density (PD) of met3 <= 0.77"
+    //    caption "   TBA   "
+    //}
+
+    //rule m3.14 {
+    //    caption "Cu Flow - Met3 PD window size == 50.00 um"
+    //    caption "   TBA   "
+    //}
+
+    //rule m3.14a {
+    //    caption "Cu Flow - Met3 PD window step == 25.00 um"
+    //    caption "   TBA   "
+    //}
+
+    rule m3.15 {
+        caption "Cu Flow - via must be enclosed by Met3 by at least >= 0.060 um" 
+        enc via met2 -lt 0.060
+    }
+#ENDIF // Copper
+
+

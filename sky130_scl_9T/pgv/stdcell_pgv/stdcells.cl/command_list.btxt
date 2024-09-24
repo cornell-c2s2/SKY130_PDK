@@ -1,0 +1,8 @@
+temperature -1
+spice_subckts /vols/wfo_devel/projects/reference_SKY130/tech/sky130_scl_9T/cdl/sky130_scl_9T.cdl 
+spice_models /vols/wfo_devel/projects/chiz/work130_2024/PGV/model_include/include_tt.scs 
+extraction_tech_file /vols/wfo_devel/projects/reference_SKY130/tech/sky130/quantus/extraction/typical/qrcTechFile
+spice_subckts_xyscaling 1000
+use_powergate_data_from_lib 0
+default_frequency 2e+08
+decap_frequency 1e+08

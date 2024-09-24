@@ -1,0 +1,27 @@
+RELEASE NOTES FOR THE SKY130 PDK
+
+--------------------------------------------------------------------------------
+VERSION 0.0.1 (19 DEC 2023)
+--------------------------------------------------------------------------------
+
+- Intial Release 
+
+--------------------------------------------------------------------------------
+VERSION 0.0.2 (07 MAR 2024)
+--------------------------------------------------------------------------------
+
+- Updated model names to remove the "sky130_fd_pr__" prefix to fix issues with DSPF
+
+--------------------------------------------------------------------------------
+VERSION 0.0.3 (29 MAR 2024)
+--------------------------------------------------------------------------------
+
+- Fixed callback issue with model names to remove the "sky130_fd_pr__" prefix
+
+--------------------------------------------------------------------------------
+VERSION 0.0.4 (13 MAY 2024)
+--------------------------------------------------------------------------------
+
+- Added extview.trp to Quantus extraction directory for Extracted View and Smart View
+- Added PYL1CON_C into the validVias for virtuosoDefaultSetup for STD Cell design
+- Layout for cap_mim_m3__base used wrong layers M3-capm-M2. Updated to correct M4-capm-M3 layers in pcell

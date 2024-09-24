@@ -1,0 +1,37 @@
+//////////////////////////////////////////////////////////////////
+//                  mcon(ct) rules                              //
+//////////////////////////////////////////////////////////////////
+
+rule ct.1 {
+    caption "Min and max L and W of mcon >= 0.170 um"
+    rect_chk mcon -ne 0.170 -orthogonal_only
+}
+
+rule ct.2 {
+    caption "Spacing of mcon to mcon >= 0.190 um"
+    exte mcon -lt 0.190 -single_point
+}
+
+//rule ct.3 {
+//    caption "Only min. square mcons are allowed except die seal ring where mcons are"
+//    caption "Checked in ct.1"
+//}
+
+//rule ct.irdrop.1 {
+//    caption "For 1 <= n <= 10 contacts on the same connector,"
+//    caption "mcon area pre- and post- Cu conversion must differ by no more than 0.2 um"
+//    caption "    TBA   "
+//}
+
+//rule ct.irdrop.2 {
+//    caption "For 11 <= n <= 100 contacts on the same connector,"
+//    caption "mcon area pre- and post- Cu conversion must differ by no more than 0.3 um"
+//    caption "     TBA    "
+
+//rule ct.ipdrop.3 {
+//    caption "For n > 100 contacts on the same connector,"
+//    caption "mcon area pre- and post- Cu conversion must differ by no more than 0.7 um"
+//    caption "     TBA    "
+//}
+
+

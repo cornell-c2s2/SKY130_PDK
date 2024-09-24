@@ -1,0 +1,144 @@
+//mf Rules//
+
+rule mf.1 {
+	caption "Min. and max width of fuse = 0.800 um"
+	with_width met4_fuse -lt 0.800
+}
+
+rule mf.2 {
+	caption "Length of fuse <= 7.200 um"
+	rect_chk met4_fuse -lt 7.200 
+}
+
+rule mf.3 {
+	caption "Spacing between centers of adjacent fuses >= 2.760 um"
+//	inte met4_fuse met4_fuse -eq 7.200 -centers -outputlayer mf.3_a
+	bbox met4_fuse -centers mf.3_a
+//djb	exte mf.3_a mf.3_a -lt 2.760 
+        exte mf.3_a -lt 2.758  //djb bbox centers are .002 microns wide, so checks
+//djb to "center" must delete .001 per center for accurate check
+//	exte fuse fuse -eq 2.760 -centerPoint 
+}
+
+rule mf.4 {
+	caption "Spacing between center of fuse and fuse_metal (fuse shields are exempted) >= 3.300 um"	
+//djb 	bbox met4 -centers mf.4_a  
+	bbox met4_fuse -centers mf.3_a
+        not met4 fuse_shield -outputlayer mf.4_a
+	exte mf.3_a mf.4_a -lt 3.299
+}
+
+rule mf.5 {
+	caption "Max. extension of fuse_metal beyond fuse boundary <= 0.830 "
+//djb	with_width met4 -gt 0.830  
+        size met4_fuse -by 0.830 -inside_of fuse -step .1 -outputlayer mf.5_a
+        not fuse mf.5_a
+}
+
+rule mf.6 {
+	caption "Spacing (no overlapping) between fuse center and Metal1 >= 3.300 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a met1 -lt 3.299 -overlap  //djb
+}
+
+rule mf.7 {
+	caption "Spacing (no overlapping) between fuse center and LI >= 3.300 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a li1 -lt 3.299 -overlap  //djb
+}
+
+rule mf.8 {
+	caption "Spacing (no overlapping) between fuse center and poly >= 2.660 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a poly -lt 2.659 -overlap  //djb
+}
+
+rule mf.9 {
+	caption "Spacing (no overlapping) between fuse center and tap >= 2.640 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a tap -lt 2.639 -overlap  //djb
+}
+
+rule mf.10 {
+	caption "Spacing (no overlapping) between fuse center and diff >= 3.250 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a diff -lt 3.249 -overlap  //djb
+}
+
+rule mf.11 {
+	caption "Spacing (no overlapping) between fuse center and nwell >= 3.320 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a nwell -lt 3.319  -overlap  //djb
+}
+
+rule mf.12 {
+	caption "Size of fuse_shield = 0.5 by 2.4 um"
+//djb	inte fuse_shield -lt 1.2 -single_point
+        rect_chk fuse_shield -lt 0.5 -by -lt 2.4
+}
+
+rule mf.13 {
+	caption "Min. spacing of center of fuse to fuse_shield >= 2.200 um"
+	bbox fuse_shield -centers mf.13_a
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a mf.13_a -lt 2.199 -single_point
+}
+
+rule mf.14 {
+	caption "Max. spacing of center of fuse to fuse_shield = 3.300 um"
+	bbox met4_fuse -centers mf.3_a
+	bbox fuse_shield -centers mf.13_a
+//djb	exte mf.3_a mf.13_a -eq 3.300 -single_point
+        size mf.3_a -by 3.299 -outputlayer mf.14_a
+        select -outside mf.14_a fuse_shield
+}
+
+//rule mf.15 {
+//	caption "Fuse_shields are only placed between periphery metal (i.e., without fuse:dg) and non-isolated edges of fuse as defined by mf.16"
+//	caption "NO CODED INFORMATION"
+//}
+
+//djb rule mf.17 {
+//djb 	caption "Offset between fuse_shields center and fuse center = 0.000 um"
+//djb	rect_gen -width 0.800 -length 7.200 -spacing 2.200 -offset 0.000  
+//djb }
+//djb needs more thought 
+
+rule mf.18 {
+	caption "Min and max space between fuse_shield and fuse_metal (opposite edges). Rule checked within 1 gridpoint. == 0.600 um"
+	exte fuse_shield met4 -eq 0.600 -single_point
+}
+
+rule mf.19 {
+	caption "Spacing (no overlapping) between fuse center and Metal2 <= 3.300 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a met2 -lt 3.299 -overlap  //djb
+}
+
+//rule mf.20 {
+//	caption "Only one fuse per metal line allowed"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule mf.21 {
+	caption "Min spacing , no overlap, between metal3 and fuse center >= 3.300 um"
+        bbox met4_fuse -centers -outputlayer mf.21_a   //djb
+	exte met3 mf.21_a -lt 3.299 -overlap -single_point   //djb
+}
+
+rule mf.22 {
+	caption "Min spacing between fuse_contact to fuse_contact >= 1.960 um"
+	exte fuse_contact fuse_contact -lt 1.960 -single_point
+}
+	
+//rule mf.23 {
+//	caption "Spacing (no overlapping) between fuse center and Metal4"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule mf.24 {
+	caption "Spacing (no overlapping) between fuse center and Metal5 >= 3.300 um"
+	bbox met4_fuse -centers mf.3_a
+	exte mf.3_a met5 -lt 3.299 -overlap  //djb
+}
+

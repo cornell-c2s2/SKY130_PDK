@@ -1,0 +1,448 @@
+#trp_version_2
+#!force_model_overwrite
+#
+model: cap_mim_m3_1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_mim_m3__base view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: cap_vpp_02p4x04p6_m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p4x04p6_m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_l1m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_l1m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_l1m1m2_shieldpo_floatm3
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_l1m1m2_shieldpo_floatm3 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_m1m2_noshield_o2
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_m1m2_noshield_o2 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_m1m2_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_m1m2_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_m1m2m3_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_m1m2m3_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_06p8x06p1_m1m2m3_shieldl1m4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_06p8x06p1_m1m2m3_shieldl1m4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_l1m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_l1m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_l1m1m2_shieldpo_floatm3
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_l1m1m2_shieldpo_floatm3 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_m1m2_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_m1m2_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_m1m2m3_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_m1m2m3_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2_shieldpom3
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2_shieldpom3 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2m3_shieldm4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2m3_shieldm4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2m3_shieldl1
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2m3_shieldl1 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m2m3m4_shieldm5
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m2m3m4_shieldm5 view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b top=top
+pmExclude: m="1" 
+#
+model: cap_vpp_11p5x11p7_m1m4_noshield
+dfiiCell: lib=sky130_fd_pr_main cell=cap_vpp_11p5x11p7_m1m4_noshield view=ivpcell
+pinMap:  c0=c0 c1=c1 b=b
+pmExclude: m="1" 
+#
+model: diode_pd2nw_05v5
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pd2nw_05v5 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pd2nw_05v5_hvt
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pd2nw_05v5_hvt view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pd2nw_05v5_lvt
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pd2nw_05v5_lvt view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pd2nw_11v0
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pd2nw_11v0 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pw2nd_05v5
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pw2nd_05v5 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pw2nd_05v5_lvt
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pw2nd_05v5_lvt view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pw2nd_05v5_nvt
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pw2nd_05v5_nvt view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: diode_pw2nd_11v0
+dfiiCell: lib=sky130_fd_pr_main cell=diode_pw2nd_11v0 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: m="1" 
+#
+model: nfet_01v8
+device: nfet_01v8
+dfiiCell: lib=sky130_fd_pr_main cell=nfet_01v8 view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: nfet_01v8_lvt
+device: nfet_01v8_lvt
+dfiiCell: lib=sky130_fd_pr_main cell=nfet_01v8_lvt view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: nfet_03v3_nvt
+device: nfet_03v3_nvt
+dfiiCell: lib=sky130_fd_pr_main cell=nfet_03v3_nvt view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: nfet_05v0_nvt
+device: nfet_05v0_nvt
+dfiiCell: lib=sky130_fd_pr_main cell=nfet_05v0_nvt view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: nfet_g5v0d10v5
+device: nfet_g5v0d10v5
+dfiiCell: lib=sky130_fd_pr_main cell=nfet_g5v0d10v5 view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: npn_05v5_W1p00L1p00
+dfiiCell: lib=sky130_fd_pr_main cell=npn_05v5 view=ivpcell
+pinMap:  C=C B=B E=E BN=BN
+pmExclude: m="1" 
+#
+model: npn_11v0_W1p00L1p00
+dfiiCell: lib=sky130_fd_pr_main cell=npn_11v0 view=ivpcell
+pinMap:  C=C B=B E=E BN=BN
+pmExclude: m="1" 
+#
+model: pfet_01v8
+device: pfet_01v8
+dfiiCell: lib=sky130_fd_pr_main cell=pfet_01v8 view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: pfet_01v8_hvt
+device: pfet_01v8_hvt
+dfiiCell: lib=sky130_fd_pr_main cell=pfet_01v8_hvt view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: pfet_01v8_lvt
+device: pfet_01v8_lvt
+dfiiCell: lib=sky130_fd_pr_main cell=pfet_01v8_lvt view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: pfet_g5v0d10v5
+device: pfet_g5v0d10v5
+dfiiCell: lib=sky130_fd_pr_main cell=pfet_g5v0d10v5 view=ivpcell
+pinMap:  D=D G=G S=S B=B
+pmExclude: l=L w=W m="1"  simM="1"  fingers="1" 
+#
+model: pnp_05v5_W0p68L0p68
+dfiiCell: lib=sky130_fd_pr_main cell=pnp_05v5 view=ivpcell
+pinMap:  C=C B=B E=E BN=BN
+pmExclude: m="1" 
+#
+model: res_generic_m1
+device: res_generic_m1
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_m1 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_generic_m2
+device: res_generic_m2
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_m2 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_generic_m3
+device: res_generic_m3
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_m3 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_generic_m4
+device: res_generic_m4
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_m4 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_generic_m5
+device: res_generic_m5
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_m5 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS
+pmExclude: effW=w effL=l segments="1" 
+#
+model: RES_GENERIC_ND
+device: RES_GENERIC_ND
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_nd view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: RES_GENERIC_PD
+device: RES_GENERIC_PD
+dfiiCell: lib=sky130_fd_pr_main cell=res_generic_pd view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_high_po_0p35
+dfiiCell: lib=sky130_fd_pr_main cell=res_high_po_0p35 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_high_po_0p69
+dfiiCell: lib=sky130_fd_pr_main cell=res_high_po_0p69 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_high_po_1p41
+dfiiCell: lib=sky130_fd_pr_main cell=res_high_po_1p41 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_high_po_2p85
+dfiiCell: lib=sky130_fd_pr_main cell=res_high_po_2p85 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_high_po_5p73
+dfiiCell: lib=sky130_fd_pr_main cell=res_high_po_5p73 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_xhigh_po_0p35
+dfiiCell: lib=sky130_fd_pr_main cell=res_xhigh_po_0p35 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_xhigh_po_0p69
+dfiiCell: lib=sky130_fd_pr_main cell=res_xhigh_po_0p69 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_xhigh_po_1p41
+dfiiCell: lib=sky130_fd_pr_main cell=res_xhigh_po_1p41 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_xhigh_po_2p85
+dfiiCell: lib=sky130_fd_pr_main cell=res_xhigh_po_2p85 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+model: res_xhigh_po_5p73
+dfiiCell: lib=sky130_fd_pr_main cell=res_xhigh_po_5p73 view=ivpcell
+pinMap:  PLUS=PLUS MINUS=MINUS B=B
+pmExclude: effW=w effL=l segments="1" 
+#
+recognition                                 met1_res device drawing
+recognition                                 met2_res device drawing
+recognition                                 met3_res device drawing
+recognition                                 met4_res device drawing
+recognition                                 met5_res device drawing
+recognition                                 diff_res device drawing
+recognition                            nfet_01v8_rec device drawing
+recognition                            pfet_01v8_rec device drawing
+recognition                         lvtpfet_01v8_rec device drawing
+recognition                         lvtnfet_01v8_rec device drawing
+recognition                         hvtpfet_01v8_rec device drawing
+recognition                             HV_ngate_3v3 device drawing
+recognition                             HV_ngate_5v0 device drawing
+recognition                           HV_ngate_5v10v device drawing
+recognition                           HV_pgate_5v10v device drawing
+#
+#
+interconnect li1 li1 drawing
+interconnect met1 met1 drawing
+interconnect met2 met2 drawing
+interconnect met3 met3 drawing
+interconnect met4 met4 drawing
+interconnect met5 met5 drawing
+#
+interconnect mcon mcon drawing
+interconnect via via drawing
+#
+#
+interconnect pwell pwell drawing
+interconnect nwell nwell drawing
+#
+interconnect nSourceDrain tap drawing
+interconnect pSourceDrain tap drawing
+interconnect HV_source_drain tap drawing
+#
+interconnect nfet poly drawing
+interconnect pfet poly drawing
+interconnect lvtpfet poly drawing
+interconnect lvtnfet poly drawing
+interconnect hvtpfet poly drawing
+interconnect HV_FET_gate poly drawing
+interconnect poly poly drawing
+interconnect poly_licon1 npc drawing
+interconnect via mcon drawing
+interconnect via2 via drawing
+interconnect via3 via2 drawing
+interconnect via4 via3 drawing
+#
+interconnect met1 li1 drawing
+
+#
+COPY 	nsdm drawing ALL
+COPY 	psdm drawing ALL
+#

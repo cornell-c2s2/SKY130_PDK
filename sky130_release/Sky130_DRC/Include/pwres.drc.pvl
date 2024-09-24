@@ -1,0 +1,74 @@
+//pwres Rules//
+
+
+//rule pwres.1 {
+//	caption "Pwell resistor has to be enclosed by the res layer" 
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule pwres.2 {
+//	caption "Min/Max width of pwell resistor = 2.650 um"
+//djb	inte pwell_res -eq 2.650 -single_point
+//        caption "Checked in pwres.3"
+//}
+
+rule pwres.3 {
+	caption "Min length of pwell resistor >= 26.500 um"
+//djb	inte pwell_res -lt 26.500
+        rect_chk -not pwell_res -eq 2.650 -by -lege 26.500 265.00
+}
+
+//rule pwres.4 {
+//	caption "Max length of pwell resistor <= 265.00 um"
+//djb	with_width pwell_res -gt 265.00
+//        caption "Checked in pwres.3"
+//}
+
+rule pwres.5 {
+	caption "Min/Max spacing of tap inside the pwell resistor to nwell = 0.220 um"
+        select -inside tap pwell_res -outputlayer pwres.5_a  //djb
+	exte pwres.5_a nwell -lt 0.220 -single_point  //djb
+}
+
+rule pwres.6 {
+	caption "Min/Max width of tap inside the pwell resistor = 0.530 um"
+        select -inside tap pwell_res -outputlayer pwres.6_a  //djb
+	with_width pwres.6_a -ne 0.530 
+}
+
+rule pwres.7a {
+	caption "Every pwres_terminal must enclose 12 licon1"
+        select -enclose -not pwell_terminal licon1 -eq 12  //djb
+}
+
+rule pwres.7b {
+	caption "Every pwres_terminal must enclose 12 mcons if routed through metal1"
+        select -inside licon1 pwell_terminal -outputlayer licon1_in_term
+        select -enclose li1 licon1_in_term -outputlayer li1_with_licon1_in_term
+        select -enclose li1_with_licon1_in_term mcon -outputlayer li1_con_met1_in_term
+        select -inside li1_con_met1_in_term met1 -outputlayer term_con_met1
+        select -enclose -not pwell_terminal mcon -eq 12
+}
+
+rule pwres.8 {
+	caption "Diff or poly is not allowed in the pwell resistor."
+        and diff pwell_res
+        and poly pwell_res
+}
+
+//rule pwres.9 {
+//	caption "Nwell surrounding the pwell resistor must have a full ring of contacted tap strapped with metal."
+//	caption "To Be Coded"
+//}
+
+//rule pwres.10 {
+//	caption "The res layer must abut pwres_terminal on opposite and parallel edges"
+//	caption "To Be Coded"
+//}
+
+//rule pwres.11 {
+//	caption "The res layer must abut nwell on opposite and parallel edges not checked in Rule pwres.10"
+//	caption "To Be Coded"
+//}
+
+

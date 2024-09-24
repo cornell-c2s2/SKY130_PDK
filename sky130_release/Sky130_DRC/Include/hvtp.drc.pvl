@@ -1,0 +1,36 @@
+//////////////////////////////////////////////////////////////////
+//                  Hvtp Rules                                  //
+//////////////////////////////////////////////////////////////////
+
+rule hvtp.1 {
+    caption "Min width of hvtp >= 0.380 um"
+    inte hvtp -lt 0.380 -single_point
+}
+
+rule hvtp.2 {
+    caption "Min space between hvtp to hvtp >= 0.380 um"
+    exte hvtp -lt 0.380 -single_point
+}
+
+rule hvtp.3 {
+    caption "Min enclosure of pfet by hvtp >= 0.180 um"
+    enc pfet hvtp -lt 0.180
+}
+
+rule hvtp.4 {
+    caption "Min spacing between pfet and hvtp >= 0.180 um"
+    exte pfet hvtp -lt 0.180 -single_point
+}
+
+rule hvtp.5 {
+    caption "Min area of hvtp >= 0.265 sq um"
+    area hvtp -lt 0.265
+}
+
+rule hvtp.6 {
+    caption _Min area of hvtp Holes >= 0.265"
+    holes hvtp -outputlayer hvtp.6_a
+    area hvtp.6_a -lt 0.265
+}
+
+

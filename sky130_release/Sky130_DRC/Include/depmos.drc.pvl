@@ -1,0 +1,69 @@
+//depmos Rules//
+
+ 
+rule depmos.1 {
+	caption "Min width of de_pFet_gate >= 1.050 um"
+	inte de_pFet_gate -lt 1.050 -single_point
+}
+	
+rule depmos.2 {
+	caption "Min width of de_pFet_source not overlapping poly >= 0.280 um"
+	inte de_pFet_source -lt 0.280 -single_point
+}
+
+
+rule depmos.3 {
+	caption "Min width of de_pFet_source overlapping poly >= 0.925 um"
+	inte de_pFet_source -lt 0.925 -single_point
+}
+
+rule depmos.4 {
+	caption "Min width of the de_pFet_drain >= 0.170 um"
+	inte de_pFet_drain -lt 0.170 -single_point
+}
+
+rule depmos.5 {
+	caption "Min/Max extension of de_pFet_source beyond nwell == 0.260"
+	inte de_pFet_source -eq 0.260
+}
+
+rule depmos.6 {	
+	caption "Min/Max spacing between de_pFet_drain and de_pFet_source == 1.190 um"
+	exte de_pFet_drain de_pFet_source -eq 1.190 -single_point
+}
+
+rule depmos.7 {
+	caption "Min channel width for de_pFet_gate >= 5.000 um" 
+	inte de_pFet_gate -lt 5.000 -single_point
+}
+
+rule depmos.8 {
+	caption "90 degree angles are not permitted for nwell hole overlapping de_pFET_drain"
+//djb	select -interact -not nwell de_pFET_drain -outputlayer depmos.8_a
+        holes nwell -outputlayer depmos.8_a
+        and depmos.8_a de_pFET_drain -outputlayer depmos.8_b
+//djb	angle -not depmos.8_a -eq 90
+        rect_chk -not -orthogonal_only depmos.8_b
+}
+
+rule depmos.10 {
+	caption "Min enclosure of de_pFet_drain by nwell hole >= 0.860 um"
+	enc de_pFet_drain nwell -lt 0.860 
+}
+
+rule depmos.11 {
+	caption "Min spacing between n+ tap and (nwell hole enclosing de_pFET_drain) >= 0.660 um"
+	exte tap de_pFET_drain -lt 0.660 -single_point
+}
+
+rule depmos.12 {
+	caption "de_pFet_source must be enclosed by psdm by >= 0.130"
+	enc de_pFet_source psdm -lt 0.130
+}
+
+//rule depmos.13 {
+//	caption "pvhv fets( except those with W/L = 5.0/0.66) must be enclosed by areaid.mt"
+//	caption "NO CODED INFORMATION"
+//}
+
+	

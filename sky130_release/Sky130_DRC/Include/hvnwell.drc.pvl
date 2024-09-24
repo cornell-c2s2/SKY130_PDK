@@ -1,0 +1,28 @@
+//hvnwell Rules//
+
+layer_def nwell		1004	
+layer_map 64 -datatype 20 1004
+
+layout_path "/dpc/project46/djb/GlobalFoundries/PegasusGapAnalysis/IT121009/djb/Sky130/For_Praneeth/hvnwell/hvnwell.gds"
+layout_primary hvnwell
+results_db -drc "./sky130_fd_sc_ls__bufinv_16.drc_errors.ascii" -ascii
+
+rule hvnwell.8 {
+	caption "Min space between HV_nwell and any nwell on different nets >= 2.000 um"
+	exte nwell nwell -lt 2.000 -single_point
+}
+
+//rule hvnwell.9 {
+//	caption "(Nwell overlapping hvi) must be enclosed by hvi"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule hvnwell.10 {
+//	caption "LVnwell and HnWell should not be on the same net (for the purposes of this check, short the connectivity through resistors); Exempt HnWell with li nets tagged “lv_net” using text.dg and Hnwell connected to nwell overlapping areaid.hl"
+//	caption "NO CODED INFORMATION"
+//}
+
+//rule hvnwell.11 {
+//	caption "Nwell connected to the nets mentioned in the “Power_Net_Hv” field of the latcup GUI must be enclosed by hvi (exempt nwell inside areaid.hl). Also for the purposes of this check, short the connectivity through resistors. The rule will be checked in the latchup run and exempted for cells “s8tsg5_tx_ibias_gen” and “s8bbcnv_psoc3p_top_18”, “rainier_top, indus_top*”, “rainier_top, manas_top, ccg3_top”"
+//	caption "NO CODED INFORMATION"
+//}

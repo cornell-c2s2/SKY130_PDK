@@ -1,0 +1,102 @@
+rule hvdifftap.14 {
+	caption "Min width of diff inside Hvi, except HV Pdiff resistors (difftap.14a) >= 0.290 um"
+	and diff hvi -outputlayer hvdiff
+	inte hvdiff -lt 0.290 -single_point
+}
+
+rule hvdifftap.14a {
+	caption "Min width of diff inside Hvi, HV Pdiff resistors only >= 0.150 um"
+	and diff hvi -outputlayer hvdiff
+	inte hvdiff -lt 0.150 -single_point
+}
+
+rule hvdifftap.15a {
+	caption "Min space of Hdiff to Hdiff >= 0.300 um"
+	exte hdiff hdiff -lt 0.300 -single_point }
+
+rule hvdifftap.15b {
+	caption "Min space of n+diff to non-abutting p+tap inside Hvi >= 0.370 um"
+//djb	not ptap hvi -outputlayer hvdifftap.15_a
+        and ptap hvi -outputlayer hvdifftap.15b_a
+        and ndiff hvi -outputlayer hvdifftap.15b_b
+	exte hvdifftap.15b_a hvdifftap.15b_b -lt 0.370 -single_point
+//	exte diff tap -lt 0.370 -single_point
+}
+
+rule hvdifftap.16 {
+	caption "Min width tap butting diff on one or two sides inside Hvi (rule exempted inside UHVI) >= 0.700 um"
+//djb	not diff hvi -outputlayer hvdifftap.16_a
+        select -touch htap hdiff -ltgt 0 3 -outputlayer hvdifftap.16_a
+        not hvdifftap.16_a uhvi -outputlayer hvdifftap.16_b
+	inte hvdifftap.16_b -lt 0.700 -single_point }
+
+rule hvdifftap.17 {
+	caption "P+ Hdiff or Pdiff inside areaid:hvnwell must be enclosed by Hv_nwell by at least ….[Rule exempted inside UHVI] >= 0.330 um"
+//djb	not hdiff areaid.hl -outputlayer hvdifftap.17_a
+//djb	not pdiff areaid.hl -outputlayer hvdifftap.17_b
+        select -outside -not pdiff areaid.hl -outputlayer hvdifftap.17_a
+	enc hvdifftap.17_a hv_nwell -lt 0.330
+//djb	enc hvdifftap.17_b hv_nwell -lt 0.330
+//	select -inside nwell diff -outputlayer hvdifftap.17_a
+//	enc nwell hvdifftap.17_a -lt 0.330
+}
+
+rule hvdifftap.18 {
+	caption "Spacing of N+ diff to HV_nwell (rule exempted inside UHVI) >= 0.430 um"
+	not ndiff uhvi -outputlayer hvdifftap.18_a
+	exte hvdifftap.18_a hv_nwell -lt 0.430 -single_point	
+}
+
+rule hvdifftap.19 {
+	caption "N+ Htap must be enclosed by Hv_nwell by at least …Rule exempted inside UHVI. >= 0.330 um"
+	not htap uhvi -outputlayer hvdifftap.19_a
+	enc hvdifftap.19_a hv_nwell -lt 0.330
+}
+
+rule hvdifftap.20 {
+	caption "Spacing of P+ tap to HV_nwell (Exempted for p+tap butting pwell.rs, rule exempted inside UHVI) >= 0.430 um"
+	not ptap uhvi -outputlayer hvdifftap.20_a
+	exte hvdifftap.20_a hv_nwell -lt 0.430
+}
+
+rule hvdifftap.21 {
+	caption "Diff or tap cannot straddle Hvi"
+	select -cut diff hvi
+	select -cut tap hvi	
+}
+
+rule hvdifftap.22 {
+	caption "Min enclosure of Hdiff or Htap by Hvi. Rule exempted inside UHVI >= 0.180 um "
+	not hdiff uhvi -outputlayer hvdifftap.22_a
+	not htap uhvi -outputlayer hvdifftap.22_b
+	enc hvdifftap.22_a hvi -lt 0.180
+	enc hvdifftap.22_b hvi -lt 0.180
+//	not tap hvi -outputlayer hvdifftap.22
+//	enc hvdifftap.22 hvi -lt 0.180 
+}
+
+rule hvdifftap.23 {
+	caption "Space between diff or tap outside Hvi and Hvi >= 0.180 um" 
+	not diff hvi -outputlayer hvdifftap.23_a
+	not tap hvi -outputlayer hvdifftap.23_b
+	exte hvdifftap.23_a hvi -lt 0.180
+	exte hvdifftap.23_b hvi -lt 0.180
+}
+
+rule hvdifftap.24 {
+	caption "Spacing of nwell to N+ Hdiff (rule exempted inside UHVI) >= 0.430 um"
+	not nwell uhvi -outputlayer hvdifftap.24_a
+	exte hvdifftap.24_a hdiff -lt 0.430
+}
+
+rule hvdifftap.25 {
+	caption "Min space of N+ Hdiff inside HVI across non-abutting P+_tap >= 1.070 um"
+	not hdiff hvi -outputlayer hvdifftap.25_a
+	exte hvdifftap.25_a ptap -lt 0.130
+}
+
+//rule hvdifftsp.26 {
+//	caption "Min spacing between pwbm to difftap outside UHVI"
+//	caption "NO CODED INFORMATION in DRM"	
+//}
+

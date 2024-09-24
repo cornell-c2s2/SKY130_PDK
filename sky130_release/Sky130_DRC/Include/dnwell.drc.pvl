@@ -1,0 +1,59 @@
+//////////////////////////////////////////////////////////////////
+//                  Dnwell Rules                                //
+//////////////////////////////////////////////////////////////////
+
+
+rule dnwell.2 {
+    caption "Min width of deep nwell >= 3.000 um"
+    inte dnwell -lt 3.000
+}
+
+rule dnwell.3 {
+    caption "Min spacing between deep nwells. Rule exempt inside UHVI. >= 6.300 um"
+    not dnwell uhvi -outputlayer dnwell.3_a
+    exte dnwell.3_a -lt 6.300 -single_point
+}
+
+//rule dnwell.3a {
+//    caption "Min spacing between deep nwells on same net inside UHVI. >= N/A"
+//    caption "  No value in DRM to code"
+//}
+
+//rule dnwell.3b {
+//    caption "Min spacing between deep nwells inside UHVI and deep-nwell outside UHVI. >= N/A"
+//    caption "  No value in DRC to code"
+//}
+
+//rule dnwell.3c {
+//    caption "Min spacing between deep nwells inside UHVI and nwell outside UHVI >= N/A"
+//    caption "  No value in DRC to code"
+//}
+
+//rule dnwell.3d {
+//    caption "Min spacing between deep nwells inside UHVI on different nets. >= N/A"
+//    caption "  No value in DRC to code"
+//}
+
+
+rule dnwell.4 {
+    caption "Dnwell can not overlap pnp"
+    and dnwell pnp
+}
+
+rule dnwell.5 {
+    caption P+ Diff can not straddle dnwell"
+    select -cut psdm dnwell
+}
+
+//rule dnwell.6 {
+//    caption "RF NMOS must be enclosed by deep nwell"
+//    caption "No RF devices in PDK
+//    not rfnmos dnwell
+//}
+
+rule dnwell.7 {
+    caption "Dnwell can not straddle areaid:substratecut"
+    select -cut dnwell areaid.st
+}
+
+

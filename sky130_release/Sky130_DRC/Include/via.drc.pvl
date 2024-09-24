@@ -1,0 +1,113 @@
+//////////////////////////////////////////////////////////////////
+//                 via rules                                    //
+//////////////////////////////////////////////////////////////////
+
+#IFNDEF Copper
+    rule via.1a {
+        caption "Al FLow - Min and max L and W of via outside areaid.mt == 0.150 um"
+        not via areaid.mt -outputlayer via.1a_a
+        rect_chk -not via.1a_a -eq 0.150 -orthogonal_only
+    }
+
+    rule via.1b {
+        caption "AL Flow - Three sizes of square Vias allowed inside areaid.mt: 0.150um, 0.230um and 0.280um"
+        select -inside via areaid.mt -outputlayer via.1b_a
+        rect_chk -not via.1b_a -eq 0.150 -orthogonal_only -outputlayer via.1b_b
+        rect_chk -not via.1b_b -eq 0.230 -orthogonal_only -outputlayer via.1b_c
+        rect_chk -not via.1b_c -eq 0.280 -orthogonal_only
+    }
+
+    rule via.2 {
+        caption "AL Flow - Spacing of via to via >= 0.170 um"
+        exte via -lt 0.170 -single_point
+    }
+
+    //rule via.3 {
+    //    caption "AL Flow - Only min. square vias are allowed except die seal ring where vias are (Via CD)*L == 0.300 um"
+    //    caption "    TBA   "
+    //}
+
+    rule via.4a {
+        caption "AL Flow - 0.150 μm Via must be enclosed by Met1 by at least >= 0.055 um"
+        rect_chk via -eq 0.150 -orthogonal_only -outputlayer via.4a_a
+        enc via.4a_a met1 -lt 0.055 -outside_also
+    }
+
+    rule via.4b {
+        caption "AL Flow - Inside areaid.mt, 0.230 μm Via must be enclosed by met1 by at least >= 0.030 um"
+        rect_chk via -eq 0.230 -orthogonal_only -outputlayer via.4b_a
+        enc via.4b_a met1 -lt 0.030 -outside_also
+    }
+
+    rule via.4c {
+        caption "AL Flow - Inside areaid.mt, 0.280 μm Via must be enclosed by met1 by at least >= 0.000 um"
+        rect_chk via -eq 0.280 -orthogonal_only -outputlayer via.4c_a
+        enc via.4c_a met1 -lt 0.000 -outside_also
+    }
+
+    rule via.5a {
+        caption "AL Flow - 0.150 μm Via must be enclosed by Met1 on one of two adjacent sides by at least >= 0.085 um"
+        rect_chk via -eq 0.150 -orthogonal_only -outputlayer via.5a_a
+        rect_enc via.5a_a met1 -good 0.085 0.000 0.085 0.000
+    }
+
+    rule via.5b {
+        caption "AL Flow - Inside areaid.mt, 0.230 μm Via must be enclosed by met1 on one of two adjacent sides by at least >= 0.060 um"
+        rect_chk via -eq 0.230 -orthogonal_only -outputlayer via.5b_a
+        rect_enc via.5b_a met1 -good 0.060 0.000 0.060 0.000
+    }
+
+    rule via.5c {
+        caption "AL Flow - Inside areaid.mt, 0.280 μm Via must be enclosed by met1 on one of two adjacent sides by at least >= 0.000 um"
+        rect_chk via -eq 0.280 -orthogonal_only -outputlayer via.5c_a
+        rect_enc via.5c_a met1 -good 0.000 0.000 0.000 0.000
+    }
+#ENDIF // Aluminum
+
+#IFDEF Copper
+    rule via.11 {
+        caption "Cu FLow - Min and max L and W of via outside areaid.mt == 0.180 um"
+        not via areaid.mt -outputlayer via.1a_a
+        rect_chk -not via.1a_a -eq 0.180 -orthogonal_only
+    }
+
+    rule via.12 {
+        caption "Cu Flow - Spacing of via to via >= 0.130 um"
+        exte via -lt 0.130 -single_point
+    }
+
+    //rule via.13 {
+    //    caption "Cu Flow - Max of 5 vias within 0.350 um"
+    //    caption "    TBA   "
+    //}
+
+    rule via.14 {
+        caption "Cu Flow - 0.180 μm Via must be enclosed by parallel edges of Met1 by at least >= 0.040 um"   
+        rect_chk via -eq 0.180 -orthogonal_only -outputlayer via.14_a
+        rect_enc via.14_a met1 -good 0.040 0.040 0.040 0.040
+    }
+
+    //rule via.irdrc.1 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via.irdrc.2 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via.irdrc.3 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via.irdrc.4 {
+    //    caption "    TBA   "
+    //}
+
+    rule via.14a {
+        caption "Cu Flow - 0.180 μm Via must be enclosed by 45 deg edges of Met1 by at least >= 0.037 um"
+        angle met1 -ltgt 44 46 -outputlayer via.14a_a
+        enc via via.14a_a -lt 0.037
+    }
+#ENDIF // Copper
+
+

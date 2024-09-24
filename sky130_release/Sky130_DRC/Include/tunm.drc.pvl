@@ -1,0 +1,49 @@
+//tunm Rules//
+
+
+rule tunm.1 {
+	caption "Min width of tunm >= 0.410 um"
+	inte tunm -lt 0.410 -single_point
+}
+
+rule tunm.2 {
+	caption "Min spacing of tunm to tunm >= 0.500 um"
+	exte tunm -lt 0.500 -single_point
+}
+
+rule tunm.3 {
+	caption "Extension of tunm beyond (poly and diff) >= 0.095 um"
+	enc tunm gate -lt 0.095 -single_point
+}
+
+rule tunm.4 {
+	caption "Min spacing of tunm to (poly and diff) outside tunm >= 0.095 um"
+	select -outside tunm gate -outputlayer tunm.4_a
+	exte tunm tunm.4_a -lt 0.095 -single_point
+}
+
+rule tunm.5 {
+	caption "(poly and diff) may not straddle tunm"
+	select -cut gate tunm
+}
+
+rule tunm.6a {
+	caption "Tunm outside deep n-well is not allowed"
+//	not tunm nwell -outputlayer tunm.6a_a
+//	enc tunm.6a_a nwell -eq 0
+	not tunm nwell
+}
+
+rule tunm.7 {
+	caption "Min tunm area >= 0.672 sq um"
+	area tunm -lt 0.672
+}
+
+rule tunm.8 {
+	caption "tunm must be enclosed by areaid.ce"
+//	not tunm areaid.ce -outputlayer tunm.8_a
+//	enc tunm.8_a areaid.ce -eq 0
+//	select -inside tunm areaid.ce -outputlayer tunm.8_a
+	not tunm areaid.ce
+}
+

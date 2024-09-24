@@ -1,0 +1,50 @@
+//ncm Rules//
+
+
+rule ncm.1 {
+	caption "Width of ncm >= 0.380 um"
+	inte ncm -lt 0.380 -single_point
+}
+
+rule ncm.2a {
+	caption "Spacing of ncm to ncm >= 0.380 um"
+	exte ncm -lt 0.380 -single_point
+}
+
+//rule ncm.2b {
+//	caption "Manual merge ncm if space is below minimum"
+//	caption "NOT CODED Informational Only"
+//	}
+
+rule ncm.3 {
+	caption "Min enclosure of P+diff by Ncm >= 0.180 um"
+	enc pdiff Ncm -lt 0.180
+}
+
+rule ncm.4 {
+	caption "Min enclosure of P+diff within (areaid:ed AndNot areaid:de) by Ncm >= 0.180 um"
+	enc Pdiff Ncm -lt 0.180
+}
+
+rule ncm.5 {
+	caption "Min space, no overlap, between ncm and (LVTN_gate) OR (diff containing lvtn) >= 0.230 um"
+	select -enclose diff lvtn -outputlayer ncm.5_a
+	or LVTN_gate ncm.5_a -outputlayer ncm.5_b
+	exte ncm LVTN_gate -lt 0.230 -overlap -single_point
+}
+
+rule ncm.6 {
+	caption "Min space, no overlap, between ncm and nfet >= 0.200 um"
+	exte ncm nfet -lt 0.200 -overlap -single_point
+}
+
+rule ncm.7 {
+	caption "Min area of ncm >= 0.265 sq um"
+	area ncm -lt 0.265 
+}
+
+rule ncm.8 {
+	caption "Min area of ncm Holes >= 0.265 sq um"
+	holes ncm -outputlayer ncm.8_a
+	area ncm.8_a -lt 0.265
+}

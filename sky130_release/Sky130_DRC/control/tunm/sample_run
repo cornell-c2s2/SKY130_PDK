@@ -1,0 +1,14 @@
+#!/bin/csh -f
+
+setenv LAYOUT_FORMAT 				gdsii
+setenv LAYOUT_PATH				/dpc/project46/djb/GlobalFoundries/PegasusGapAnalysis/IT121009/djb/Sky130/For_Praneeth/full_deck/control/tunm/tunm.gds
+setenv LAYOUT_PRIMARY 				sky130_fd_sc_ls__bufinv_16
+setenv REPORT_SUMMARY 				sky130_fd_sc_ls__bufinv_16.sum
+setenv ABORT_ON_LAYOUT_ERROR			NO
+setenv TEXT_DEPTH				PRIMARY
+setenv pegver 					$Builds/PVS_22.20.005-s504/tools.lnx86/bin/pvs
+#setenv PVS_DRC					/dpc/project46/djb/GlobalFoundries/PegasusGapAnalysis/IT121009/djb/Sky130/For_Praneeth
+#setenv PVS_DRC 					/dpc/project46/djb/GlobalFoundries/PegasusGapAnalysis/IT121009/djb/Sky130/New_deck
+setenv PVS_DRC					/dpc/project46/djb/GlobalFoundries/PegasusGapAnalysis/IT121009/djb/Sky130/For_Praneeth/full_deck
+
+$pegver -p -drc -tc test -gds test.gds -control control $PVS_DRC/sky130_Dev.drc.pvl > drc.log

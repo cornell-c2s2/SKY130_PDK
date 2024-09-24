@@ -1,0 +1,68 @@
+;| version 1
+text text_met5 attach met5
+text text_met4 attach met4
+text text_met3 attach met3
+text text_met2 attach met2
+text text_met1 attach met1
+text text_li1 attach li1
+text text_nwell attach nwell
+text text_pwell attach pwell
+connect li1 pSourceDrain by licon1
+connect li1 nSourceDrain by licon1
+connect li1 pp_term by licon1
+connect li1 np_term by licon1
+connect pSourceDrain ntap
+connect nSourceDrain ptap
+connect li1 ptap by licon1
+connect li1 ntap by licon1
+connect li1 isolated_tap by licon1
+connect li1 poly by poly_licon1
+connect poly pfet
+connect poly nfet
+connect gate poly
+connect li1 HV_poly by licon1
+connect li1 HV_source_drain by licon1
+connect met1 li1 by mcon
+connect met2 met1 by via
+connect met3 met2 by via2
+connect met4 met3 by via3
+connect met5 met4 by via4
+connect HV_tap HV_nwell
+stamp pwell by ptap
+stamp nwell by ntap
+stamp HV_FET_gate by gate
+stamp hvtpfet by pfet
+stamp lvtpfet by pfet
+stamp lvtnfet by nfet
+model=res[res_generic_m1],res_generic_m1
+element res[res_generic_m1] met1_res met1
+model=res[res_generic_m2],res_generic_m2
+element res[res_generic_m2] met2_res met2
+model=res[res_generic_m3],res_generic_m3
+element res[res_generic_m3] met3_res met3
+model=res[res_generic_m4],res_generic_m4
+element res[res_generic_m4] met4_res met4
+model=res[res_generic_m5],res_generic_m5
+element res[res_generic_m5] met5_res met5
+model=res[RES_GENERIC_ND],RES_GENERIC_ND
+element res[RES_GENERIC_ND] diff_res np_term
+model=res[RES_GENERIC_PD],RES_GENERIC_PD
+element res[RES_GENERIC_PD] diff_res pp_term
+model=mos[nfet_01v8],nfet_01v8
+element mos[nfet_01v8] nfet_01v8_rec nfet nSourceDrain pwell
+model=mos[pfet_01v8],pfet_01v8
+element mos[pfet_01v8] pfet_01v8_rec pfet pSourceDrain nwell
+model=mos[pfet_01v8_lvt],pfet_01v8_lvt
+element mos[pfet_01v8_lvt] lvtpfet_01v8_rec lvtpfet pSourceDrain nwell
+model=mos[nfet_01v8_lvt],nfet_01v8_lvt
+element mos[nfet_01v8_lvt] lvtnfet_01v8_rec lvtnfet nSourceDrain pwell
+model=mos[pfet_01v8_hvt],pfet_01v8_hvt
+element mos[pfet_01v8_hvt] hvtpfet_01v8_rec hvtpfet pSourceDrain nwell
+model=mos[nfet_03v3_nvt],nfet_03v3_nvt
+element mos[nfet_03v3_nvt] HV_ngate_3v3 HV_FET_gate HV_source_drain pwell
+model=mos[nfet_05v0_nvt],nfet_05v0_nvt
+element mos[nfet_05v0_nvt] HV_ngate_5v0 HV_FET_gate HV_source_drain pwell
+model=mos[nfet_g5v0d10v5],nfet_g5v0d10v5
+element mos[nfet_g5v0d10v5] HV_ngate_5v10v HV_FET_gate HV_source_drain pwell
+model=mos[pfet_g5v0d10v5],pfet_g5v0d10v5
+element mos[pfet_g5v0d10v5] HV_pgate_5v10v HV_FET_gate HV_source_drain nwell

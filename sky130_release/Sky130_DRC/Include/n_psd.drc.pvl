@@ -1,0 +1,87 @@
+//////////////////////////////////////////////////////////////////
+//                  n/psd rules                                 //
+//////////////////////////////////////////////////////////////////
+
+
+rule psd.1 {
+    caption "width of nsdm(psdm) >= 0.380 um"
+    inte nsdm -lt 0.380
+    inte psdm -lt 0.380
+}
+
+rule psd.2 {
+    caption "Spacing of nsdm(psdm) to nsdm(psdm) >= 0.380 um"
+    caption "psd.3 - Manual merge if less than minimum"
+    exte nsdm -lt 0.380 -single_point
+    exte psdm -lt 0.380 -single_point
+}
+
+//rule psd.3 {
+//    caption "Manual merge if less than minimum"
+//    caption "NOT CODED Informational Only"
+//}
+
+rule psd.5a {
+    caption "Enclosure of diff by nsdm(psdm), except for butting edge >= 0.125 um"
+    or nsdm psdm -outputlayer psd.5a_a
+    enc diff psd.5a_a -lt 0.125
+}
+
+rule psd.5b {
+    caption "Enclosure of tap by nsdm(psdm), except for butting edge >= 0.125 um"
+    or nsdm psdm -outputlayer psd.5b_a
+    enc tap psd.5b_a -lt 0.125
+}
+
+rule psd.6 {
+    caption "Enclosure of diff/tap butting edge by nsdm (psdm) == 0.000 um"
+    select -donut poly -outputlayer psd.6_a
+    select -interact diff psd.6_a -outputlayer psd.6_b
+    edge_boolean -coincident_only psd.6_b tap -outputlayer psd.6_c
+    edge_boolean -coincident_only nsdm psdm -outputlayer psd.6_d
+    edge_select -coincident_only -not psd.6_c psd.6_d
+}
+
+rule psd.7 {
+    caption "Spacing of NSDM/PSDM to opposite implant diff or tap -lt 0.130"
+    caption "(for non-abutting diff/tap edges)"
+    exte nsdm pdiff -ltgt 0.0 0.130 -overlap
+    exte nsdm ntap -ltgt 0.0 0.130 -overlap
+    exte psdm ndiff -ltgt 0.0 0.130 -overlap
+    exte psdm pdiff -ltgt 0.0 0.130 -overlap
+}
+
+//rule psd.8 {
+//    caption "Nsdm and psdm cannot overlap diff/tap regions of opposite doping"
+//    caption "Checked by psd.7"
+//}
+
+rule psd.9 {
+    caption "Diff and tap must be enclosed by their corresponding implant layers."
+    caption "Rule exempted for"
+    caption "diff rings around the die at min total L>1000 um and W=0.3 um"
+    caption "gated_npm areaid.zer."
+    or nsdm psdm -outputlayer psd.9_a
+    not diff psd.9_a
+    not tap psd.9_a
+}
+
+rule psd.10a {
+    caption "Min area of Nsdm >= 0.265 sq um"
+    area nsdm -lt 0.265
+}
+
+rule psd.10b {
+    caption "Min area of Psdm >- 0.255 sq um"
+    area psdm -lt 0.255
+}
+
+rule psd.11 {
+    caption "Min area od n/psdm Holes >= 0.265 sq um"
+    holes nsdm -outputlayer psd.11_a
+    area psd.11_a -lt 0.265
+    holes psdm -outputlayer psd.11_b
+    area psd.11_b -lt 0.265
+}
+
+

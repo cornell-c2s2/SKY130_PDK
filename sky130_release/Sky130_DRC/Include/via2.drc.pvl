@@ -1,0 +1,113 @@
+//////////////////////////////////////////////////////////////////
+//                 via2 rules                                   //
+//////////////////////////////////////////////////////////////////
+
+#IFNDEF Copper
+    rule via2.1a {
+        caption "Al FLow - Min and max L and W of via2 outside areaid.mt == 0.200 um"
+        not via2 areaid.mt -outputlayer via2.1a_a
+        rect_chk -not via2.1a_a -eq 0.200 -orthogonal_only
+    }
+
+    rule via2.1b {
+        caption "AL Flow - Three sizes of square Via2s allowed inside areaid.mt: 0.280, 1.200um and 1.500um"
+        select -inside via2 areaid.mt -outputlayer via2.1b_a
+        rect_chk -not via2.1b_a -eq 0.280 -orthogonal_only -outputlayer via2.1b_b
+        rect_chk -not via2.1b_b -eq 1.200 -orthogonal_only -outputlayer via2.1b_c
+        rect_chk -not via2.1b_c -eq 1.500 -orthogonal_only
+    }
+
+    rule via2.1c {
+        caption "AL Flow - Two sizes of square Via2s allowed inside areaid.mt: 1.200um and 1.500um"
+        select -inside via2 areaid.mt -outputlayer via2.1c_a
+        rect_chk -not via2.1c_a -eq 1.200 -orthogonal_only -outputlayer via2.1c_b
+        rect_chk -not via2.1c_b -eq 1.500 -orthogonal_only
+    }
+
+    rule via2.1d {
+        caption "AL Flow - Four sizes of square Via2s allowed inside areaid.mt: 0.200um, 0.280um, 1.200um and 1.500um"
+        select -inside via2 areaid.mt -outputlayer via2.1d_a
+        rect_chk -not via2.1d_a -eq 0.200 -orthogonal_only -outputlayer via2.1d_b 
+        rect_chk -not via2.1d_b -eq 0.280 -orthogonal_only -outputlayer via2.1d_c
+        rect_chk -not via2.1d_c -eq 1.299 -orthogonal_only -outputlayer via2.1d_d
+        rect_chk -not via2.1d_d -eq 1.500 -orthogonal_only
+    }
+
+    rule via2.1e {
+        caption "AL Flow - Three sizes of square Via2s allowed inside areaid.mt: 0.800um, 1.200um and 1.500um"
+        select -inside via2 areaid.mt -outputlayer via2.1e_a
+        rect_chk -not via2.1e_a -eq 0.800 -orthogonal_only -outputlayer via2.1e_b
+        rect_chk -not via2.1e_b -eq 1.200 -orthogonal_only -outputlayer via2.1e_c
+        rect_chk -not via2.1e_c -eq 1.500 -orthogonal_only
+    }
+
+    rule via2.1f {
+        caption "AL Flow - Two sizes of square Via2s allowed inside areaid.mt: 0.800um and 1.200um"
+        select -inside via2 areaid.mt -outputlayer via2.1f_a
+        rect_chk -not via2.1f_a -eq 0.800 -orthogonal_only -outputlayer via2.1f_b
+        rect_chk -not via2.1f_b -eq 1.200 -orthogonal_only
+    }
+
+    rule via2.2 {
+        caption "AL Flow - Spacing of via2 to via2 >= 0.200 um"
+        exte via2 -lt 0.200 -single_point
+    }
+
+    //rule via2.3 {
+    //    caption "AL Flow - Only min. square via2s are allowed except die seal ring where via2s are (Via2 CD)*L == 0.400 um"
+    //    caption "    TBA   "
+    //}
+
+    rule via2.4 {
+        caption "AL Flow - Via2 must be enclosed by Met2 by at least >= 0.040 um"
+        enc via2 met2 -lt 0.040 -outside_also
+    }
+
+    rule via2.4a {
+        caption "AL Flow - Inside areaid.mt, 1.500 μm Via2 must be enclosed by met2 by at least >= 0.140 um"
+        rect_chk via2 -eq 1.500 -orthogonal_only -outputlayer via2.4b_a
+        enc via2.4b_a met2 -lt 0.140 -outside_also
+    }
+
+    rule via2.5 {
+        caption "AL Flow - Via2 must be enclosed by Met2 on one of two adjacent sides by at least >= 0.085 um"
+        rect_enc via2 met2 -good 0.085 0.000 0.085 0.000
+    }
+#ENDIF // Aluminum
+
+#IFDEF Copper
+    rule via2.11 {
+        caption "Cu FLow - Min and max L and W of via outside areaid.mt == 0.210 um"
+        not via2 areaid.mt -outputlayer via2.1a_a
+        rect_chk -not via2.1a_a -eq 0.210 -orthogonal_only
+    }
+
+    rule via2.12 {
+        caption "Cu Flow - Spacing of via2 to via2 >= 0.180 um"
+        exte via2 -lt 0.180 -single_point
+    }
+
+    //rule via2.13 {
+    //    caption "Cu Flow - Min Spacing betweeb via2 rows >= 0.200 um"
+    //    caption "    TBA   "
+    //}
+
+    rule via2.14 {
+        caption "Cu Flow - Via2 must be enclosed by Met2 by at least >= 0.035 um"   
+        enc via2 met2 -lt 0.035
+    }
+
+    //rule via2.irdrc.1 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via2.irdrc.2 {
+    //    caption "    TBA   "
+    //}
+
+    //rule via2.irdrc.3 {
+    //    caption "    TBA   "
+    //}
+#ENDIF // Copper
+
+

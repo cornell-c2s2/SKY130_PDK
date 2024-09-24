@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      chiz
+HostName                       sjcvl-chiz.cadence.com
+ProcessIdentifier              9830
+ProcessCreationTime_UTC        1705262077
+ProcessCreationTime_Readable   Sun Jan 14 11:54:37 2024 PST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /vols/wfo_devel/projects/chiz/work130_2024/sky130_scl_9T/TIELO/schematic/sch.oa.cdslck
+TimeEditLocked                 Tue Jan 30 07:47:55 2024 PST

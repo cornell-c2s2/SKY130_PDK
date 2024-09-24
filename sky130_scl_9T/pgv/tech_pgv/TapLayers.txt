@@ -1,0 +1,420 @@
+CELL: ADDFX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: ADDHX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AND2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AND2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AND3X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AND3X2
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: AND4X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AND4X2
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: AOI211X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI211X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI21X1
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: AOI21X2
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: AOI221X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI221X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI222X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI222X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI22X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: AOI22X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: BUFX16
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: BUFX2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: BUFX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: BUFX8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKAND2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKBUFX2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKBUFX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKBUFX8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKINVX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKINVX2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKINVX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKINVX8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKMX2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: CLKXOR2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFRX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFRX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFSRX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFSRX4
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: DFFSX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFSX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DFFX4
+VDD: TECH: metal2
+VSS: TECH: metal2
+CELL: DLY1X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DLY1X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DLY2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: DLY4X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL16
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL32
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL64
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: FILL8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: ICGX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: INVX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: INVX16
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: INVX2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: INVX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: INVX8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: MX2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: MX2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: MX4X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: MX4X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND3X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND3X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND3X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND4X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND4X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NAND4X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR3X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR3X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR3X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR4X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR4X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NOR4X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: NSUBFGR
+CELL: OAI211X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI211X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI21X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI21X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI221X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI221X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI222X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI222X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI22X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OAI22X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR3X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR3X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR4X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: OR4X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: PSUBFGR
+CELL: SDFFRX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFRX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFSRX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFSRX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFSX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFSX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: SDFFX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TBUFX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TBUFX4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TBUFX8
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TIEHI
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TIELO
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TLATSRX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: TLATX1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XNOR2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XNOR2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XNOR2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XOR2X1
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XOR2X2
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: XOR2X4
+VSS: TECH: metal2
+VDD: TECH: metal2
+CELL: cap_mim_m3__base
+CELL: cap_vpp_02p4x04p6_m1m2_noshield
+CELL: cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap
+CELL: cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap
+CELL: cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap
+CELL: cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap
+CELL: cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2
+CELL: cap_vpp_04p4x04p6_l1m1m2_noshield
+CELL: cap_vpp_04p4x04p6_l1m1m2_shieldpo_floatm3
+CELL: cap_vpp_04p4x04p6_m1m2_noshield
+CELL: cap_vpp_04p4x04p6_m1m2_noshield_o2
+CELL: cap_vpp_04p4x04p6_m1m2_shieldl1
+CELL: cap_vpp_04p4x04p6_m1m2m3_shieldl1
+CELL: cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4
+CELL: cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap
+CELL: cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4
+CELL: cap_vpp_06p8x06p1_m1m2m3_shieldl1m4
+CELL: cap_vpp_08p6x07p8_l1m1m2_noshield
+CELL: cap_vpp_08p6x07p8_l1m1m2_shieldpo_floatm3
+CELL: cap_vpp_08p6x07p8_m1m2_noshield
+CELL: cap_vpp_08p6x07p8_m1m2_shieldl1
+CELL: cap_vpp_08p6x07p8_m1m2m3_shieldl1
+CELL: cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4
+CELL: cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap
+CELL: cap_vpp_11p5x11p7_l1m1m2_noshield
+CELL: cap_vpp_11p5x11p7_l1m1m2_shieldpom3
+CELL: cap_vpp_11p5x11p7_l1m1m2m3_shieldm4
+CELL: cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4
+CELL: cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5
+CELL: cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5
+CELL: cap_vpp_11p5x11p7_m1m2_noshield
+CELL: cap_vpp_11p5x11p7_m1m2_shieldl1
+CELL: cap_vpp_11p5x11p7_m1m2m3_shieldl1
+CELL: cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4
+CELL: cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5
+CELL: cap_vpp_11p5x11p7_m1m2m3m4_shieldm5
+CELL: cap_vpp_11p5x11p7_m1m4_noshield
+CELL: diffConn
+CELL: nfet_01v8
+CELL: nfet_01v8_lvt
+CELL: nfet_03v3_nvt
+CELL: nfet_05v0_nvt
+CELL: nfet_g5v0d10v5
+CELL: npn_05v5
+CELL: npn_11v0
+CELL: nwellTap
+CELL: pfet_01v8
+CELL: pfet_01v8_hvt
+CELL: pfet_01v8_lvt
+CELL: pfet_g5v0d10v5
+CELL: pnp_05v5
+CELL: polyConn
+CELL: res_generic_m1
+CELL: res_generic_m2
+CELL: res_generic_m3
+CELL: res_generic_m4
+CELL: res_generic_m5
+CELL: res_generic_nd
+CELL: res_generic_pd
+CELL: res_high_po_0p35
+CELL: res_high_po_0p69
+CELL: res_high_po_1p41
+CELL: res_high_po_2p85
+CELL: res_high_po_5p73
+CELL: res_xhigh_po_0p35
+CELL: res_xhigh_po_0p69
+CELL: res_xhigh_po_1p41
+CELL: res_xhigh_po_2p85
+CELL: res_xhigh_po_5p73
+CELL: subTap

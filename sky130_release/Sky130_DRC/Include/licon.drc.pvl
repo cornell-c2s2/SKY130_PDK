@@ -1,0 +1,200 @@
+//////////////////////////////////////////////////////////////////
+//                  licon rules                                 //
+//////////////////////////////////////////////////////////////////
+
+rule licon.1 {
+    caption "Min and max L and W of licon1 (exempt licons inside prec_resistor) == 0.170 um"
+    caption "Filter for prec_resistor TBA"
+    rect_chk licon1 -ne 0.170 -orthogonal_only }
+
+//rule licon.1b {
+//    caption "Min and max width of licon1 inside prec_resistor == 0.190 um"
+//    caption "  TBA  "
+//}
+
+//rule licon.1c {
+//    caption "Min and max length of licon1 inside prec_resistor == 2.000 um"
+//    caption "   TBA  "
+//}
+
+rule licon.2 {
+    caption "Spacing of licon1 to licon1 >= 0.170 um"
+    exte licon1 -lt 0.170 -single_point
+}
+
+//rule licon 2b {
+//    caption "Min spacing between two slotted_licon (when the both the edges are 0.19um in length) >= 0.350 um"
+//    caption "    TBA   "
+//}
+
+//rule licon.2c {
+//    caption "Min spacing between two slotted_licon (except for rule licon.2b) >= 0.510 um"
+//    caption "    TBA   "
+//}
+
+//rule licon.2d {
+//    caption "Min spacing between a slotted_licon and 0.17um square licon >= 0.510 um"
+//    caption "    TBA   "
+//}
+
+//Rule licon.3 {
+//    caption "Only min. square licons are allowed except die seal ring where licons are (licon CD)*L >= 0.170 um"
+//    caption "Checked with licon.1, seal ring acception TBA "
+//}
+ 
+rule licon.4 {
+    caption "Licon1 must overlap li1 and (poly or diff or tap)"
+    or poly diff tap -outputlayer licon.4_a
+    select -interact -not licon1 licon.4_a }
+
+rule licon.5a {
+    caption "Enclosure of licon by diff >= 0.040 um"
+    enc licon1 diff -lt 0.040
+}
+
+rule licon.5b {
+    caption "Min space between tap_licon and diff-abutting tap edge >= 0.060 um"
+    and tap licon1 -outputlayer licon.5b
+    exte licon.5b diff -lt 0.060
+}
+
+rule licon.5c {
+    caption "Enclosure of licon by diff on one of two adjacent sides >= 0.060 um"
+    rect_enc licon1 diff -good 0.060 0.000 0.060 0.000 }
+
+rule licon.6 {
+    caption "licon cannot straddle tap"
+    select -cut licon1 tap
+}
+
+rule licon.7 {
+    caption "Enclosure of licon by one of two adjacent edges of isolated tap >= 0.120 um"
+    rect_enc licon1 tap -good 0.120 0.000 0.120 0.000 }
+
+rule licon.8 {
+    caption "Enclosure of poly_licon by poly >= 0.050 um"
+    and poly licon1 -outputlayer licon.8_a
+    enc licon.8_a poly -lt 0.050
+}
+
+rule licon.8a {
+    caption "Enclosure of poly_licon by poly on one of two adjacent sides >= 0.080 um"
+    and poly licon1 -outputlayer licon.8a_a
+    rect_enc licon.8a_a poly -good 0.080 0.000 0.080 0.000 }
+
+rule licon.9 {
+    caption "Spacing, no overlap, between poly_licon and psdm >= 0.110 um"
+    caption "In SKY130DIA/SKY130TMA/SKY130PIR-10 flows, the rule is checked only"
+    caption "between (poly_licon outside rpm) and psdm"
+    caption " Limitation TBA "
+    and poly licon1 -outputlayer licon.9_a
+    exte licon.9_a psdm -lt 0.110 -overlap }
+
+//rule licon.10 {
+//    caption "Spacing of licon on (tap AND (nwell NOT hvi)) to Var_channel >= 0.250 um"
+//    caption "   TBA   "
+//}
+
+rule licon.11 {
+    caption "Spacing of licon on diff or tap to poly on diff >= 0.055 um"
+    caption "(except for all FETs inside areaid.sc"
+    caption "and except s8spf-10r flow for 0.5um phv inside cell names s8fs_gwdlvx4,"
+    caption "s8fs_gwdlvx8, s8fs_hvrsw_x4, s8fs_hvrsw8, s8fs_hvrsw264,"
+    caption "and s8fs_hvrsw520 and for 0.15um nshort inside cell names s8fs_rdecdrv,"
+    caption "s8fs_rdec8, s8fs_rdec32, s8fs_rdec264, s8fs_rdec520)"
+    caption "Exceptions TPA  "A
+    not gate areaid.sc -outputlayer licon.11_a
+    or diff tap -outputlayer licon.11_b
+    and licon1 licon.11_b -outputlayer licon.11_c
+    exte licon.11_a licon.11_c -lt 0.055 }
+
+rule licon.11a {
+    caption "Spacing of licon on diff or tap to poly on diff >= 0.050 um"
+    caption "(for all FETs inside areaid.sc except 0.15um phighvt)"
+    caption " phighvt Exception  TBA "
+    and gate areaid.sc -outputlayer licon.11a_a
+    or diff tap -outputlayer licon.11a_b
+    and licon1 licon.11a_b -outputlayer licon.11a_c
+    and licon.11a_a diff -outputlayer licon.11a_d
+    exte licon.11a_c licon.11a_d -lt 0.050 }
+
+//rule licon.11b {
+//    caption "Spacing of licon on diff or tap to poly on diff (for 0.15um phighvt inside areaid.sc) >= 0.050 um"
+//    caption "    TBA   "
+//}
+
+//rule licon.11c {
+//    caption "Spacing of licon on diff or tap to poly on diff >= 0.040 um"
+//    caption "(for 0.5um phv inside cell names s8fs_gwdlvx4, s8fs_gwdlvx8,"
+//    caption “s8fs_hvrsw_x4, s8fs_hvrsw8, s8fs_hvrsw264, and s8fs_hvrsw520)"
+//    caption "   TBA   "
+//}
+
+//rule licon.11d {
+//    caption "Spacing of licon on diff or tap to poly on diff >= 0.045 um"
+//    caption "(for 0.15um nshort inside cell names s8fs_rdecdrv, s8fs_rdec8,"
+//    caption “s8fs_rdec32, s8fs_rdec264, s8fs_rdec520)"
+//    caption "    TBA    "
+//}
+   
+rule licon.12 {
+    caption "Max SD width without licon <= 5.700 um"
+    or ndiff pdiff -outputlayer n_or_p_diff
+    not n_or_p_diff gate -outputlayer diff_no_gate
+    select -enclose diff_no_gate licon1 -outputlayer li_w_licon
+    select -touch li_w_licon gate -gt 0 -outputlayer li_source_drain_w_licon
+    size licon1 -by 5.700 -inside_of li_source_Drain_w_licon -step 0.040 -outputlayer poss_good
+    not diff_no_gate poss_good
+}
+
+rule licon.13 {
+    caption "Spacing (no overlap) of NPC to licon on diff or tap >= 0.090 um"
+    or diff tap -outputlayer licon.13_a
+    and licon1 licon.13_a -outputlayer licon.13_b
+    exte npc licon.13_b -lt 0.090 -overlap }
+
+rule licon.14 {
+    caption "Spacing of poly_licon to diff or tap >= 0.190 um"
+    and poly licon1 -outputlayer licon.14_a
+    or diff tap -outputlayer licon.14_b
+    exte licon.14_a licon.14_b -lt 0.190 }
+
+rule licon.15 {
+    caption "poly_licon must be enclosed by npc by >= 0.100 um"
+    and poly licon1 -outputlayer licon.14_a
+    enc licon.14_a npc -lt 0.100
+}
+
+rule licon.16 {
+    caption "Every source_diff and every tap must enclose at least one licon1,"
+    caption "including the diff/tap straddling areaid:ce. Rule exempted inside UHVI"
+    select -touch ndiff tap -outputlayer licon.16_a
+    not ndiff licon.16_a -outputlayer licon.16_b
+    select -enclose -not licon.16_b licon1 -gt 0 -outputlayer poss_err1
+    select -touch pdiff tap -outputlayer licon.16_c
+    not pdiff licon.16_c -outputlayer licon.16_d
+    select -enclose -not licon.16_d licon1 -gt 0 -outputlayer poss_err2
+    select -enclose -not tap licon1 -gt 0 -outputlayer poss_err3
+    or poss_err1 poss_err2 poss_err3 -outputlayer poss_err
+    not poss_err uhvi
+}
+
+rule licon.17 {
+    caption "Licons may not overlap both poly and (diff or tap)"
+    select -cut licon1 poly -outputlayer licon.17_a
+    or diff tap -outputlayer licon.17_b
+    select -cut licon.17_a licon.17_b
+}
+
+rule licon.18 {
+    caption "Npc must enclose poly_licon"
+    and poly licon1 -outputlayer licon.18_a
+    not licon.18_a npc
+}
+
+//rule licon.19 {
+//    caption "poly of the HV varactor must not interact with licon"
+//    caption "    TBA   "
+//} 
+
+

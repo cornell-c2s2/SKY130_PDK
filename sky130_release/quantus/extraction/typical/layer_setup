@@ -1,0 +1,31 @@
+pro_layer=FOX ext_layer=nwell,pwell
+pro_layer=diff ext_layer=nSourceDrain
+pro_layer=diff ext_layer=ntap,isolated_tap
+pro_layer=diff ext_layer=pSourceDrain
+pro_layer=diff ext_layer=ptap
+pro_layer=diff ext_layer=HV_source_drain
+pro_layer=diff ext_layer=pp_term
+pro_layer=diff ext_layer=np_term
+pro_layer=poly ext_layer=poly,HV_poly,gate
+pro_layer=poly ext_layer=nfet marker_mos_gate
+pro_layer=poly ext_layer=pfet marker_mos_gate
+pro_layer=poly ext_layer=hvtpfet marker_mos_gate
+pro_layer=poly ext_layer=lvtnfet marker_mos_gate
+pro_layer=poly ext_layer=lvtpfet marker_mos_gate
+pro_layer=poly ext_layer=HV_FET_gate marker_mos_gate
+pro_layer=li ext_layer=li1
+pro_layer=metal1 ext_layer=met1
+pro_layer=metal2 ext_layer=met2
+pro_layer=metal3 ext_layer=met3
+pro_layer=metal4 ext_layer=met4
+pro_layer=metal5 ext_layer=met5
+pro_cont=licon ext_cont=poly_licon1 top_layer=li bottom_layer=poly 
+pro_cont=licon_diff ext_cont=licon1 top_layer=li bottom_layer=diff
+pro_cont=mcon ext_cont=mcon
+pro_cont=via1 ext_cont=via
+pro_cont=via2 ext_cont=via2
+pro_cont=via3 ext_cont=via3
+pro_cont=via4 ext_cont=via4
+
+#removing 
+delete_layer=isolated_tap

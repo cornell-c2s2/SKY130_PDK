@@ -1,0 +1,104 @@
+//////////////////////////////////////////////////////////////////
+//                 m2 rules                                     //
+//////////////////////////////////////////////////////////////////
+
+//rule m2.den {
+//    caption "Algorithm should flag errors, for met2, if ANY of the following is true:"
+//    caption "An entire 700x700 window is covered by cmm2 waffleDrop, and metX PD < 70% for same window."
+//    caption "80-100% of 700x700 window is covered by cmm2 waffleDrop, and metX PD < 65% for same window."
+//    caption "60-80% of 700x700 window is covered by cmm2 waffleDrop, and metX PD < 60% for same window."
+//    caption "50-60% of 700x700 window is covered by cmm2 waffleDrop, and metX PD < 50% for same window."
+//    caption "40-50% of 700x700 window is covered by cmm2 waffleDrop, and metX PD < 40% for same window."
+//    caption "30-40% of 700x700 window is covered by cmm2 waffleDrop, and metX PD < 30% for same window."
+//    caption "Exclude cells whose area is below 40Kum2. NOTE: Required for IP, Recommended for Chip-level"
+//    caption "     TBA    "
+//}
+
+rule m2.1 {
+    caption "Width of metal2 >= 0.140 um"
+    inte met2 -lt 0.140
+}
+
+rule m2.2 {
+    caption "Spacing of metal2 to metal2 >= 0.140 um"
+    exte met2 -lt 0.140 -single_point
+}
+
+//rule m2.3a {
+//    caption "Min. spacing of features attached to or extending from huge_met2"
+//    caption "for a distance of up to 0.280 μm to metal2 >= 0.280 um"
+//    caption "(rule not checked over non-huge met2 features)"
+//    caption "   TBA  "
+//}
+
+rule m2.3b {
+    caption "Min. spacing of huge_met2 to metal2 excluding features checked by m2.3a >= 0.280 um"
+    exte huge_met2 met2 -lt 0.280 -single_point
+}
+
+//rule m2.3c {
+//    caption "Min spacing between floating_met2 with AR_met2_A >= 0.05 and AR_met2_B <= 0.032"
+//    caption "outside areaid.sc must be greater than >= 0.145 um"
+//    caption "    TBA    "
+//}
+
+#IFNDEF Copper
+    rule m2.4 {
+        caption "AL Flow via must be enclosed by Met2 by at least >= 0.055 um"
+        enc via met2 -lt 0.055
+    }
+
+    rule m2.5 {
+        caption "AL Flow - via must be enclosed by Met2 on one of two adjacent sides by at least >= 0.085 um" 
+        rect_enc via met2 -good 0.085 0.000 0.085 0.000
+    }
+#ENDIF // Alumimum
+
+rule m2.6 {
+    caption "Min metal 2 area >= 0.067 sq um"
+    area met2 -lt 0.067
+}
+
+rule m2.7 {
+    caption "Min area of metal2 holes >= 0.140 sq um"
+    holes met2 -outputlayer m2.7_a
+    area m2.7_a -lt 0.140
+}
+
+//rule m2.pd.* {
+//    caption " TBA "
+//}
+
+#IFDEF Copper
+    rule m2.11 {
+        caption "Cu Flow - Max width of metal2 <= 4.000 um"
+        with_width met2 -gt 4.000
+    }
+
+    //rule m2.12 {
+    //    caption "Cu Flow - Add slots and remove vias and contacts if met1 wider than >-3.200"
+    //    caption "   TBA   "
+    //}
+
+    //rule m2.13 {
+    //    caption "Cu Flow - Max pattern density (PD) of met2 <= 0.77"
+    //    caption "   TBA   "
+    //}
+
+    //rule m2.14 {
+    //    caption "Cu Flow - Met2 PD window size == 50.00 um"
+    //    caption "   TBA   "
+    //}
+
+    //rule m2.14a {
+    //    caption "Cu Flow - Met2 PD window step == 25.00 um"
+    //    caption "   TBA   "
+    //}
+
+    rule m2.15 {
+        caption "Cu Flow - via must be enclosed by Met2 on one of two adjacent sides by at least >= 0.040 um" 
+        rect_enc via met2 -good 0.040 0.000 0.040 0.000
+    }
+#ENDIF // Copper
+
+

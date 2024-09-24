@@ -1,0 +1,108 @@
+//rpm Rules//
+
+
+//rule rpm.1a {
+//	caption "Min width of rpm >= 1.270 um"
+//	inte rpm -lt 1.270 -single_point
+//}
+
+//rule rpm.1b {
+//	caption "Min/Max prec_resistor width xhrpoly_0p35 == 0.350 um"
+//	rect_chk xhrpoly_0p35 -eq 0.350
+//}
+
+//rule rpm.1c {
+//	caption "Min/Max prec_resistor width xhrpoly_0p69 == 0.690 um"
+//	rect_chk xhrpoly_0p69 -eq 0.690
+//}
+
+//rule rpm.1d {
+//	caption "Min/Max prec_resistor width xhrpoly_1p41 == 1.410 um"
+//	rect_chk xhrpoly_1p41 -eq 1.410
+//}
+
+//rule rpm.1e {
+//	caption "Min/Max prec_resistor width xhrpoly_2p85 == 2.850 um"
+//	rect_chk xhrpoly_2p85 -eq 2.850
+//}
+
+//rule rpm.1f {
+//	caption "Min/Max prec_resistor width xhrpoly_5p73 == 5.730 um"
+//	rect_chk xhrpoly_5p73 -eq 5.730 
+//}
+
+//rule rpm.1g {
+//	caption "Only 1 licon is allowed in xhrpoly_0p35 prec_resistor_terminal"
+//	caption "NOT CODED Informational Only"
+//	}
+
+//rule rpm.1h {
+//	caption "Only 1 licon is allowed in xhrpoly_0p69 prec_resistor_terminal"
+//	caption "NOT CODED Informational Only"
+//	}
+
+//rule rpm.1i {
+//	caption "Only 2 licon is allowed in xhrpoly_1p41 prec_resistor_terminal"
+//	caption "NOT CODED Informational Only"
+//	}
+
+//rule rpm.1j {
+//	caption "Only 4 licon is allowed in xhrpoly_2p85 prec_resistor_terminal"
+//	caption "NOT CODED Informational Only"
+//	}
+
+
+//rule rpm.1k {
+//	caption "Only 8 licon is allowed in xhrpoly_5p73 prec_resistor_terminal"
+//	caption "NOT CODED Informational Only"
+//	}
+
+rule rpm.2 {
+	caption "Min spacing of rpm to rpm >= 0.840 um"
+	exte rpm -lt 0.840 -single_point
+}
+
+rule rpm.3 {
+	caption "rpm must enclose prec_resistor by atleast >= 0.200 um"
+	enc rpm prec_resistor -lt 0.200
+}
+
+rule rpm.4 {
+	caption "prec_resistor must be enclosed by psdm by atleast >= 0.110 um"
+	enc prec_resistor psdm -lt 0.110
+}
+
+rule rpm.5 {
+	caption "prec_resistor must be enclosed by npc by atleast >= 0.095 um"
+	enc prec_resistor npc -lt 0.095
+}
+
+rule rpm.6 {
+	caption "Min spacing, no overlap, of rpm and nsdm >= 0.200 um"
+	exte rpm nsdm -lt 0.200 -overlap -single_point
+}
+
+rule rpm.7 {
+	caption "Min spacing between rpm and poly >= 0.200 um"
+	exte rpm poly -lt 0.200 -single_point
+}
+
+rule rpm.8 {
+	caption "poly must not straddle rpm"
+	select -cut poly rpm
+}
+
+rule rpm.9 {
+	caption "Min space, no overlap, between prec_resistor and hvntm >= 0.185 um"
+	exte prec_resistor hvntm -lt 0.185 -overlap -single_point
+}
+
+//rule rpm.10 {
+//	caption "Min spacing of rpm to pwbm"
+//	caption "NO VALUE IN DRM"
+//}
+
+rule rpm.11 {
+	caption "rpm should not overlap or straddle pwbm"
+	select -interact rpm pwbm
+}

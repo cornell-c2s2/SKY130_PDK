@@ -1,0 +1,17 @@
+//hvpoly Rules//
+
+
+rule hvpoly.13 {
+	caption "Min width of poly over diff inside Hvi >= 0.500 um" 
+//djb	inte poly -lt 0.500 -single_point
+        and poly hvi -outputlayer hvpoly.13_a
+        and hvpoly.13_a diff -outputlayer hvpoly.13_b
+        inte hvpoly.13_b -lt 0.500
+}
+
+rule hvpoly.14 {
+	caption "(poly and diff) cannot straddle Hvi"
+	select -cut gate hvi
+}
+
+

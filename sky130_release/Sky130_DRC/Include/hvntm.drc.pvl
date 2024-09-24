@@ -1,0 +1,62 @@
+//hvntm Rules//
+
+
+//rule hvntm.X.1 {
+//	caption "Hvntm can be drawn inside HVI. Drawn layer will be OR-ed with the CL and rechecked for CLDRC"
+//	caption "NO CODED INFORMATION"
+//}
+
+rule hvntm.1 {
+	caption "Width of hvntm >= 0.700 um"
+	inte hvntm -lt 0.700 -single_point
+}
+
+rule hvntm.2 {
+	caption "Spacing of hvntm to hvntm >= 0.700 um"
+	exte hvntm hvntm -lt 0.700 -single_point
+}
+		
+rule hvntm.3 {
+	caption "Min. enclosure of (n+_diff inside Hvi) but not overlapping areaid.ce by hvntm >= 0.185 um"
+	select -inside ndiff hvi -outputlayer hvntm.3_a
+	enc hvntm.3_a hvi -lt 0.185
+	and hvntm.3_a areaid.ce
+//	enc diff hvntm -lt 0.185
+}
+
+rule hvntm.4 {
+	caption "Space, no overlap, between n+_diff outside Hvi and hvntm >= 0.185 um"	
+	select -outside ndiff hvi -outputlayer hvntm.4_a
+	exte hvntm.4_a hvntm -lt 0.185 -overlap -single_point
+}
+		
+rule hvntm.5 {
+	caption "Space, no overlap, between p+_diff and hvntm >= 0.185 um"
+	exte pdiff hvntm -lt 0.185 -overlap -single_point
+}
+
+rule hvntm.6a {
+	caption "Space, no overlap, between p+_tap and hvntm (except along the diff-butting edge) >= 0.185 um"
+	exte ptap hvntm -lt 0.185 -overlap -single_point
+}
+
+rule hvntm.6b {
+	caption "Space, no overlap, between p+_tap and hvntm along the diff-butting edge >= 0.000 um"
+	select -touch ptap hvntm -outputlayer hvntm.6b_a
+	exte hvntm.6b_a ptap -eq 0.000 
+}
+
+//rule hvntm.7 {
+//	caption "hvntm must enclose ESD_nwell_tap inside hvi by atleast"
+//	caption "NO EXACT INFORMATION PROVIDED"
+//}
+
+rule hvntm.9 {
+	caption "Hvntm must not overlap areaid.ce"
+	and hvntm areaid.ce
+}
+
+rule hvntm.10 {
+	caption "Hvntm must overlap hvi" 
+	select -interact -not hvntm hvi
+}

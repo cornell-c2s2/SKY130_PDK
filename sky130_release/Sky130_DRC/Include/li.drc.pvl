@@ -1,0 +1,50 @@
+//////////////////////////////////////////////////////////////////
+//                  li rules                                    //
+//////////////////////////////////////////////////////////////////
+
+rule li.1 {
+    caption "Width of LI (except for li.1a) >= 0.170 um"
+    inside_cell -not li1 "s8rf2_xcmvpp_hd5_*" -outputlayer li.1_a
+    inte li.1_a -lt 0.170
+}
+
+rule li.1a {
+    caption "Width of LI inside of cells with name s8rf2_xcmvpp_hd5_* >= 0.140 um"
+    inside_cell li1 "s8rf2_xcmvpp_hd5_*" -outputlayer li.1a_a
+    inte li.1a_a -lt 0.140
+}
+
+//rule li.2 {
+//    caption "Max ratio of length to width of LI without licon or mcon 
+//    caption "NOT CHECKED in DRC (Should review with dfm_property)"
+//}
+
+rule li.3 {
+    caption "Spacing of LI to LI (except for li.3a) >= 0.170 um"
+    inside_cell -not li1 "s8rf2_xcmvpp_hd5_*" -outputlayer li.3_a
+    exte li.3_a -lt 0.170 -single_point
+}
+
+rule li.3a {
+    caption "Spacing of LI to LI inside cells with names s8rf2_xcmvpp_hd5_* >= 0.140 um"
+    inside_cell li1 "s8rf2_xcmvpp_hd5_*" -outputlayer li.3a_a
+    exte li.3a_a -lt 0.140 -single_point
+}
+
+rule li.5 {
+    caption "Enclosure of licon by one of two adjacent LI sides >= 0.080 um"
+    rect_enc licon1 li1 -good 0.080 0.000 0.080 0.000
+}
+
+rule li.6 {
+    caption "Min area of Li >= 0.056 sq um"
+    area li1 -lt 0.056
+}
+
+//rule li.7 {
+//    caption "Min LI resistor width (rule exempted within areaid.ed"
+//    caption "Inside areaid.ed, min width of the li resistor is determined by rule li.1)"
+//    caption "    TBA   "
+//}
+
+
