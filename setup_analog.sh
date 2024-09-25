@@ -8,3 +8,6 @@ export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
 unset OA_HOME
 #
 export CDS_Netlisting_Mode=Analog
+# SKY130 Specific Pegasus
+export PEGASUS_DRC=~/SKY130_PDK/sky130_release/Sky130_DRC
+export PEGASUS_LVS=~/SKY130_PDK/sky130_release/Sky130_LVS
