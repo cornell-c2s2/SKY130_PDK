@@ -1,0 +1,34 @@
+#!/bin/sh
+# *****************************************************************************
+# *****************************************************************************
+# oaScanCDS
+#
+# This script is wrapper for oaScanCDS. Set the following options depending on
+# how you would like to use oaScan.
+#
+# Mode:
+# The default is to run the optimized executable. To run a debug version,
+# set the mode to 'dbg' by setting the OASCAN_MODE environment variable to
+# 'dbg'. Note, the debug version is not normally released.
+#
+# *****************************************************************************
+# This work may not be copied, modified, re-published, uploaded, executed, or
+# distributed in any way, in any medium, whether in whole or in part, without
+# prior written permission from Cadence Design Systems, Inc.
+#
+#                  Copyright 2023 Cadence Design Systems, Inc.
+#                         All Rights Reserved Worldwide.
+#
+# *****************************************************************************
+# *****************************************************************************
+
+PROGRAM=oaScanCDS
+INSTALL_ROOT=`dirname $0`
+unset cdpath
+INSTALL_ROOT=`cd $INSTALL_ROOT/..;pwd`
+PLATFORM=`/bin/uname -s`
+
+BIT=${OASCAN_BIT:-64}
+MODE=${OASCAN_MODE:-opt}
+
+exec $INSTALL_ROOT/bin/runExe $PROGRAM $INSTALL_ROOT $BIT $MODE $ARGS "$@"

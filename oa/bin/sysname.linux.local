@@ -1,0 +1,31 @@
+#!/bin/sh
+# ******************************************************************************
+# ******************************************************************************
+# This file handles additional platforms.
+#
+# Files with the ".local" suffix are Cadence-only and are not shipped to Si2.
+#
+# ******************************************************************************
+# This work may not be copied, modified, re-published, uploaded, executed, or
+# distributed in any way, in any medium, whether in whole or in part, without
+# prior written permission from Cadence Design Systems, Inc.
+#
+#                 Copyright 2023 Cadence Design Systems, Inc.
+#                        All Rights Reserved Worldwide.
+#
+# ******************************************************************************
+# ******************************************************************************
+
+case $machine in
+    aarch64 )
+        longVersion=$(< /etc/redhat-release)
+        sysname="lna64_rhel70_gcc93x "
+        sysnames="$sysname lna64_rhel70 $sysnames"
+        ;;
+
+    ppc64le )
+        longVersion=$(< /etc/redhat-release)
+        sysname="lnppc_rhel70_gcc93x "
+        sysnames="$sysname lnppc_rhel70 $sysnames"
+        ;;
+esac

@@ -1,0 +1,232 @@
+#!/bin/sh
+# ******************************************************************************
+# ******************************************************************************
+# sysname
+#
+# Script to print a string describing the type of operating system being run. 
+# The string can currently be one of the following:
+#   linux_rhel60
+#   linux_rhel70_gcc93x
+#   x64
+#
+#   A user may set the variable OA_UNSUPPORTED_PLAT to force the name of an
+#   unsupported platform to work.  Specifically for Linux, if the type of
+#   Linux system is not recognized, the OA_UNSUPPORTED_PLAT variable is 
+#   examined and used if set.
+#
+# ******************************************************************************
+# Except as specified in the OpenAccess terms of use of Cadence or Silicon
+# Integration Initiative, this material may not be copied, modified,
+# re-published, uploaded, executed, or distributed in any way, in any medium,
+# in whole or in part, without prior written permission from Cadence.
+#
+#                 Copyright 2002 Cadence Design Systems, Inc.
+#                        All Rights Reserved Worldwide.
+#
+# *****************************************************************************
+# *****************************************************************************
+
+PATH=/usr/bin:/bin:$PATH
+
+usage() {
+  echo "Usage: sysname [ -h | -m | -b | -v | -V ]"
+}
+
+
+
+# *****************************************************************************
+# check_linux
+#
+# This routine sets the version, system, and sysname variables for the Linux 
+# operating system.  If the version of Linux is unrecognized and 
+# OA_UNSUPPORTED_PLAT is set, then that is returned.  
+# *****************************************************************************
+check_linux() {
+    sysnames=$sysname
+
+    version=${system_release_machine[1]}
+    machine=${system_release_machine[2]}
+
+    case $machine in
+        x86_64 )
+            if [[ -f "/etc/os-release" ]]
+            then
+                id_name=`
+                    /bin/awk -F \" '
+                        $1 ~ /^ID=$/ { id = $2 }
+                        $1 ~ /^VERSION_ID=$/ { ver = $2 }
+                        $1 ~ /^PRETTY_NAME=$/ { name = $2 }
+                        END { print id ver " " name }
+                        ' /etc/os-release`
+                longVersion=${id_name#* }
+                shortVersion=${id_name%% *}
+
+                if [[ -z ${shortVersion#rhel[789].[0-9]*} ||
+                      -z ${shortVersion#sles12.[0-9]*} ||
+                      -z ${shortVersion#sles15.[0-9]*} ||
+                      -z ${shortVersion#centos7} ]]
+                then
+                    sysname="linux_rhel70_gcc93x"
+                    sysnames="$sysname linux_rhel60 $sysnames"
+                fi
+            elif [[ -f "/etc/redhat-release" ]]
+            then
+                longVersion=$(< /etc/redhat-release)
+
+                if [[ -z ${longVersion%Red Hat Enterprise Linux * 6.[0-9]*} ||
+                      -z ${longVersion%CentOS release 6.[0-9]*} ]]
+                then
+                    sysname="linux_rhel60"
+                    sysnames="$sysname $sysnames"
+                fi
+            elif [[ -f "/etc/SuSE-release" ]]
+            then
+                longVersion=$(< /etc/SuSE-release)
+
+                if [[ -z ${longVersion%SUSE Linux Enterprise Server 11 *} ]]
+                then
+                    sysname="linux_rhel60"
+                    sysnames="$sysname $sysnames"
+                fi
+            fi
+            ;;
+
+        * )
+            OA_SYSNAME_PATH=${0%/*}
+
+            if [[ -f "$OA_SYSNAME_PATH/sysname.linux.local" ]] ; then
+                . "$OA_SYSNAME_PATH/sysname.linux.local"
+            fi
+    esac
+
+    if [[ $sysname = "linux" ]]
+    then
+        check_global
+    fi
+}
+
+
+
+# *****************************************************************************
+# check_win
+#
+# This routine sets the version, system, and sysname variables for the Windows
+# operating system. 
+# *****************************************************************************
+check_win() {
+    sysname="x64"
+    sysnames=$sysname
+    version="x64"
+    longVersion="Windows 64bit"
+}
+
+
+
+# *****************************************************************************
+# check_global
+#
+# This routine handles the sysname for an unsupported system.  If a user
+# wants to run on an unsupported system, they must set the environment
+# variable OA_UNSUPPORTED_PLAT to the sysname they wish to utilize.
+# Otherwise, the script will exit.
+# *****************************************************************************
+check_global() {
+  if [ -n "$OA_UNSUPPORTED_PLAT" ]
+   then
+       sysname=${OA_UNSUPPORTED_PLAT}
+       sysnames=$sysname
+       version="Unknown"
+       longVersion="Unknown"
+   else
+      echo "unknown"
+      exit 1
+   fi 
+}
+
+
+
+# ******************************************************************************
+# Start of the script
+# ******************************************************************************
+
+# Check for options.
+if [ $# -gt 1 ];
+then
+  usage
+  exit 1
+fi
+
+matching_sysnames=0
+base_sysname=0
+get_version=0
+get_longVersion=0
+if [ $# -eq 1 ];
+then
+  case $1 in 
+    -h )
+      usage; exit 0;;
+    -m )
+      matching_sysnames=1;;
+    -b )
+      base_sysname=1;;
+    -v )
+      get_version=1;;
+    -V )
+      get_longVersion=1;;
+    * )
+      usage; exit 1
+  esac       
+else
+    if [ -n "$OA_SYSNAME" ]; then
+	echo $OA_SYSNAME
+	exit 0
+    fi
+fi
+
+
+
+# Get information about the operating system. Store it in an array so uname is
+# called only once. The order of output of uname is set by POSIX.
+declare -a system_release_machine
+system_release_machine=(`uname -srm`)
+
+sysname=${system_release_machine[0]}
+sysname=`echo $sysname | LC_ALL=C tr -s '[:upper:]' '[:lower:]'`
+basesysname="$sysname"
+
+# Call the appropriate function to get the sysname. The sysname will embed 
+# information about the version of the operating system, processor type and 
+# architecture. It will be returned in the variable $sysname. A list of 
+# compatible sysnames will also be returned in $sysnames.
+case $basesysname in 
+  linux ) check_linux;;
+  windows*|cygwin_nt* ) check_win;;
+  * ) check_global;;
+esac
+
+
+
+# If an error occured, this script already exited with a non-zero error code.
+
+# If the -m option was specified, output a list of matching 
+# sysnames, in order of priority. If the -b option was specified,
+# it will print out the base sysname for this system. Otherwise, 
+# print the actual sysname of the machine.
+
+if [ $get_version -eq 1 ];
+then
+  echo $version
+elif [ $get_longVersion -eq 1 ];
+then
+  echo $longVersion
+elif [ $matching_sysnames -eq 1 ];
+then
+  echo $sysnames 
+elif [ $base_sysname -eq 1 ];
+then
+  echo $sysnames | awk '{print $NF}'
+else
+  echo $sysname
+fi
+
+exit 0

@@ -1,0 +1,114 @@
+#!/bin/sh
+# *****************************************************************************
+# *****************************************************************************
+# oaGetLibPath
+#
+# This script is a wrapper for returning the LD_LIBRARY_PATH, SHLIB_PATH,
+# LIBPATH to the OpenAccess libraries.  The user may provide the BIT and MODE
+# options, or use the default values.   The BIT may be specified on the 
+# command-line or via the Environment variable OA_BIT, otherwise it will
+# default to 64.  Note that the command-line option superceeds the Environment
+# variable.  The MODE may be set by the Environment variable OA_MODE,
+# otherwise it will default to "opt".
+#
+# *****************************************************************************
+# Except as specified in the OpenAccess terms of use of Cadence or Silicon
+# Integration Initiative, this material may not be copied, modified,
+# re-published, uploaded, executed, or distributed in any way, in any medium,
+# in whole or in part, without prior written permission from Cadence.
+#
+#                Copyright 2002-2005 Cadence Design Systems, Inc.
+#                           All Rights Reserved.
+#
+# $Author: icftcm $
+# $Revision: #1 $
+# $Date: 2024/03/07 $
+# $State$
+#
+# *****************************************************************************
+# *****************************************************************************
+
+PROGRAM=oaGetLibPath
+
+usage="USAGE:  $PROGRAM [-numBits {32|64}]"
+
+#
+# Command-line option checking.
+#
+while [ $# != 0 ]
+do
+    case $1 in
+      -numBits)
+        if [ $# -lt 2 ]
+        then
+            echo "Option -numBits requires an argument (ie 32 or 64)." >&2
+            echo "$usage" >&2
+            exit 1
+        fi
+ 
+        OA_BIT=$2
+
+	if [ "$OA_BIT" != 32 -a "$OA_BIT" != 64 ]
+	then
+	    echo "Option -numBits requires 32 or 64 as an argument." >&2
+            echo "$usage" >&2
+	    exit 1
+	fi
+
+        shift 2 
+        ;;
+
+      -h)
+        echo "$usage" 
+        exit 0
+        ;;
+
+      *) 
+        echo "Unknown argument:  $1" >&2 
+        echo "$usage" >&2
+        exit 1 
+        ;;
+    esac 
+done
+
+ 
+#
+# Check to see if OA_BIT was set and set correctly.
+#
+if [ -n "$OA_BIT" -a "$OA_BIT" != 32 -a "$OA_BIT" != 64 ]
+then
+    echo "Environment variable OA_BIT requires 32 or 64 as a value." >&2
+    exit 1
+fi
+
+
+#
+# Convert OA_MODE to lower case and check to see if it is "opt" or "dbg".
+#
+OA_MODE=`echo $OA_MODE | LC_ALL=C tr 'A-Z' 'a-z'`
+
+if [ -n "$OA_MODE" -a "$OA_MODE" != opt -a "$OA_MODE" != dbg -a "$OA_MODE" != optdbg ]
+then
+    echo "Environment variable OA_MODE requires 'opt' or 'dbg' or 'optdbg' as a value." >&2
+    exit 1
+fi
+
+
+#
+# Get path to the program.
+#
+INSTALL_ROOT=`dirname $0`
+unset cdpath
+INSTALL_ROOT=`cd $INSTALL_ROOT/..;pwd`
+
+
+#
+# Set default values for BIT and MODE.
+#
+BIT=${OA_BIT:-64}
+BIT=${OAGETLIBPATH_BIT:-$BIT}
+
+MODE=${OA_MODE:-opt}
+MODE=${OAGETLIBPATH_MODE:-$MODE}
+
+exec $INSTALL_ROOT/bin/runExe $PROGRAM $INSTALL_ROOT $BIT $MODE "$@"

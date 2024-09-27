@@ -1,0 +1,256 @@
+#!/bin/sh
+# *****************************************************************************
+# *****************************************************************************
+# runExe
+# This program is wrapper script for the OpenAccess database.
+# Its function is to correctly set the required environment
+# variables to run an OpenAccess binary.
+#
+# This program will set the following variables prior to running
+# the executable that it received as an argument:
+#
+# Linux: LD_LIBRARY_PATH
+#        PATH
+#
+# *****************************************************************************
+# Except as specified in the OpenAccess terms of use of Cadence or Silicon
+# Integration Initiative, this material may not be copied, modified,
+# re-published, uploaded, executed, or distributed in any way, in any medium,
+# in whole or in part, without prior written permission from Cadence.
+#
+#                Copyright 2002-2005 Cadence Design Systems, Inc.
+#                           All Rights Reserved.
+#
+# $Author: icftcm $
+# $Revision: #1 $
+# $Date: 2024/03/07 $
+# $State: Exp $
+#
+# *****************************************************************************
+# *****************************************************************************
+set -f
+
+printHelp() {
+cat <<EOHELP
+ runExe
+ This program is wrapper script for the OpenAccess database.
+ Its function is to correctly set the required environment
+ variables to run an OpenAccess binary.
+
+ This program will set the following variables prior to running
+ the executable that it received as an argument:
+
+ Linux: LD_LIBRARY_PATH
+        PATH
+EOHELP
+}
+
+
+
+checkExec() {
+  if [ "$BASE_SYSNAME" = "linux" ] ; then
+    msg="`ldd $1 | grep 'not found'`"
+
+    if [ "$msg" != "" ] ; then
+      echo "ERROR: The required shared libraries for the program $1 are incorrect or incomplete. This is probably caused by an incorrect setting of the LD_LIBRARY_PATH environment variable. Consult the OpenAccess 2.2 Installation and Configuration Notes. The reported error is $msg"
+
+      exit 1
+    fi
+  fi
+}
+
+
+
+if [ $# -eq 0 ]
+then
+    printHelp
+    exit
+fi
+
+PROGRAM=$1
+INSTALL_ROOT=$2
+BIT=$3
+MODE=$4
+shift 4
+
+SYSNAME=`$INSTALL_ROOT/bin/sysname`
+SYSNAMES=`$INSTALL_ROOT/bin/sysname -m`
+BASE_SYSNAME=`$INSTALL_ROOT/bin/sysname -b`
+MACHINE=`/bin/uname -m`
+VERSION=02.02
+
+
+### Parse the command line args.  oaGetLibPath has only one
+### argument.
+OA_DEBUG3264=0
+
+if [ $PROGRAM = "oaGetLibPath" ] && [ "$1" = "-numBits" ]
+then
+  BIT=$2
+else
+  while [ $# -ne 0 ] 
+  do 
+    case $1 in
+      -64)  	  OA_SWITCH_BIT=64;;
+      -32)  	  OA_SWITCH_BIT=32;;
+      -dbg) 	  OA_SWITCH_MODE=dbg;;
+      -opt) 	  OA_SWITCH_MODE=opt;;
+      -debug3264) OA_DEBUG3264=1;;
+      *)          OA_OPTS="$OA_OPTS '$1'";;
+    esac
+
+    shift;
+  done
+
+  if [ -n "$OA_SWITCH_BIT" ]
+  then
+    BIT=$OA_SWITCH_BIT
+  fi
+
+  if [ -n "$OA_SWITCH_MODE" ]
+  then
+    MODE=$OA_SWITCH_MODE
+  fi
+
+  if [ $OA_DEBUG3264 -eq 1 ]
+  then
+    echo "INFO: Debugging 32/64 bit selection."
+
+    if [ -n "$OA_SWITCH_BIT" ]
+    then
+      echo "  The -$OA_SWITCH_BIT option was provided on the command line."
+    else
+      APP_BIT_VAR=`echo $PROGRAM | tr '[a-z]' '[A-Z]'`_BIT
+      APP_BIT=`eval echo "$"$APP_BIT_VAR`
+
+      if [ -n "$APP_BIT" ]
+      then
+	echo "  The $APP_BIT_VAR environment variable is set to $APP_BIT."
+      elif [ -n "$OA_BIT" ]
+      then
+	echo "  The OA_BIT environment variable is set to $OA_BIT."
+      else 
+	echo "  No explicit 32/64 bit selection was made.  The platform default will be used."
+      fi
+    fi
+  fi
+fi
+
+
+
+
+### FORCE the bit for the platforms that are NOT multi-bit aware (linux)
+if [ "$BASE_SYSNAME" = "linux" ]
+then
+    case "$MACHINE" in
+        *86)
+            BIT=32
+
+	    if [ $OA_DEBUG3264 -eq 1 ]
+	    then
+	      echo "  The $BASE_SYSNAME $MACHINE platform only supports 32 bit."
+	    fi;;
+	*86_64)
+	    if [ $BIT -eq 32 ]
+	    then
+		if [ ! -d $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE ]
+		then
+		    BIT=64
+
+	    	    if [ $OA_DEBUG3264 -eq 1 ]
+	    	    then
+	      	      echo "  The 32 bit applications are not installed."
+	    	    fi
+		fi
+	    fi;;
+    esac
+fi
+
+
+### set environment based on installed and allowed sysnames
+for sysname in $SYSNAME $SYSNAMES
+do
+  if [ -d $INSTALL_ROOT/bin/${sysname}_$BIT/$MODE/. ]
+  then
+    SYSNAME=$sysname
+    break
+  fi
+done
+
+
+### Provide diagnostics if there are no applications installed for the selected
+### bit and mode.
+if [ $PROGRAM != "oaGetLibPath" ] && [ ! -d $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE ]
+then
+  echo "ERROR: $PROGRAM cannot be executed because the $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE directory does not exist."
+
+  APP_VAR=`echo $PROGRAM | tr '[a-z]' '[A-Z]'`
+  APP_BIT=`eval echo "$"${APP_VAR}_BIT`
+
+  if [ -n "$OA_SWITCH_BIT" ]
+  then
+    echo "  Verify that the -$OA_SWITCH_BIT option is correct or do not use this option."
+  elif [ -n "$APP_BIT" ]
+  then
+    echo "  Verify that the ${APP_VAR}_BIT environment variable is set correctly or unset this variable."
+  elif [ -n "$OA_BIT" ]
+  then
+    echo "  Verify that the OA_BIT environment variable is set correctly or unset this variable."
+  else
+    echo "  Consider setting the OA_BIT environment variable."
+  fi
+
+  APP_MODE=`eval echo "$"${APP_VAR}_MODE`
+
+  if [ -n "$OA_SWITCH_MODE" ]
+  then
+    echo "  Verify that the -$OA_SWITCH_MODE option is correct."
+  elif [ -n "$APP_MODE" ]
+  then
+    echo "  Verify that the ${APP_VAR}_MODE environment variable is set correctly or unset this variable."
+  elif [ -n "$OA_MODE" ]
+  then
+    echo "  Verify that the OA_MODE environment variable is set correctly or unset this variable."
+  else
+    echo "  Consider setting the OA_MODE environment variable."
+  fi
+
+  exit 1
+fi
+
+
+### set the appropriate environment variables
+OA_PATH=$INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE
+OA_LIBRARY_PATH_BASE=$INSTALL_ROOT/lib/${SYSNAME}_$BIT/$MODE
+OA_LIBRARY_PATH=${OA_LIBRARY_PATH:+${OA_LIBRARY_PATH_BASE}:$OA_LIBRARY_PATH}
+OA_LIBRARY_PATH=${OA_LIBRARY_PATH:-$OA_LIBRARY_PATH_BASE}
+
+if [ $PROGRAM != "oaGetLibPath" ]
+then
+  PATH=${PATH:+${OA_PATH}:$PATH}
+  PATH=${PATH:-$OA_PATH}
+  export PATH
+
+  case "$SYSNAME" in
+      linux*)
+          LD_LIBRARY_PATH=${LD_LIBRARY_PATH:+${OA_LIBRARY_PATH}:$LD_LIBRARY_PATH}
+          LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-$OA_LIBRARY_PATH}
+          export LD_LIBRARY_PATH;;
+  esac
+
+  if [ "$PROGRAM" = "oaGetVersion" ]
+  then
+    checkExec $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE/$PROGRAM
+  fi
+
+  ### run the program
+  if [ $OA_DEBUG3264 -eq 1 ]
+  then
+      echo "  Selected $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE/$PROGRAM"
+  fi
+
+  eval exec $INSTALL_ROOT/bin/${SYSNAME}_$BIT/$MODE/$PROGRAM $OA_OPTS
+elif [ $PROGRAM = "oaGetLibPath" ]
+then
+  echo "$OA_LIBRARY_PATH"
+fi

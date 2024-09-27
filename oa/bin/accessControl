@@ -1,0 +1,40 @@
+#!/bin/sh
+# *****************************************************************************
+# *****************************************************************************
+# accessControl
+#
+# This script is wrapper for accessControl.  You can set the following options
+# depending on how you would like to use accessControl.
+#
+# Mode:
+# The default use is to run the optimized mode.  To specify debug mode
+# for all programs, you should set the OA_MODE environment variable to 'dbg'.
+#
+# To set the mode to 'dbg' on an individual program you should
+# set the ACCESSCONTROL_MODE environment variable to 'dbg'.
+#
+# *****************************************************************************
+# This work may not be copied, modified, re-published, uploaded, executed, or
+# distributed in any way, in any medium, whether in whole or in part, without
+# prior written permission from Cadence Design Systems, Inc.
+#
+#               Copyright 2022 Cadence Design Systems, Inc.
+#                       All rights reserved worldwide.
+#
+# *****************************************************************************
+# *****************************************************************************
+
+
+
+PROGRAM=accessControl
+INSTALL_ROOT=`dirname $0`
+unset cdpath
+INSTALL_ROOT=`cd $INSTALL_ROOT/..;pwd`
+
+BIT=${OA_BIT:-64}
+BIT=${ACCESSCONTROL_BIT:-$BIT}
+
+MODE=${OA_MODE:-opt}
+MODE=${ACCESSCONTROL_MODE:-$MODE}
+
+exec $INSTALL_ROOT/bin/runExe $PROGRAM $INSTALL_ROOT 64 $MODE "$@"
