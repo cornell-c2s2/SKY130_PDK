@@ -1,0 +1,6 @@
+pvsRuleSet( "DRC"
+(DrcRules "../../Sky130_DRC/sky130_rev_0.0_1.0.drc.pvl" )
+)
+pvsRuleSet( "LVS"
+(LvsRules "../../Sky130_LVS/sky130.lvs.pvl" )
+)
