@@ -1,5 +1,6 @@
 #Cadence Virtuoso
 module load cadence/cadence
+module load cadence/innovus
 #For parasitic extraction:
 export ASSURAHOME=/opt/cadence/assura
 export PATH=$ASSURAHOME/tools/bin:$PATH
