@@ -1,0 +1,134 @@
+# Created by txd3 04/01/2024
+# Layer numbers taken from sky130_fd_pr_main.layermap
+
+assume microns
+#assume ohm-cm
+assume ohms/sq
+assume ohms/via
+
+# Double-check below M1
+# define OD = L1T0
+
+define licon1 = L66T60+L66T44+L66T41+L66T58
+define li1 = L67T4+L67T20+L67T5+L67T23+L67T16
+define mcon = L67T60+L67T44+L67T41+L67T48
+define nwell = L64T20+L64T5+L64T23+L64T16
+define diff_l = L65T4+L65T20+L65T6+L65T23+L65T16
+define pwell_l = L64T44+L64T59+L64T16
+
+# Metal gds Layer Definitions
+
+#drawing, label, net, pin
+
+define  M1 = L68T20+L68T5+L68T23+L68T16
+define  M2 = L69T20+L69T5+L69T23+L69T16 
+define  M3 = L70T20+L70T5+L70T23+L70T16
+define CAPM = L89T44
+define  M4 = L71T20+L71T5+L71T23+L71T16
+define CAP2M = L97T44
+define  M5 = L72T20+L72T5+L72T23+L72T16
+
+
+# Via gds Layer Definitions
+
+define  VIA1 = L68T60+L68T44+L68T41+L68T58
+define  VIA2 = L69T60+L69T44+L69T41+L69T58
+define  VIA3COMBINED = L70T44 #L70T60+L70T44+L70T41+L70T48
+define  VIA3 = VIA3COMBINED-CAPM
+define  VIA3CAP = VIA3COMBINED*CAPM
+define  VIA4COMBINED = L71T60+L71T44+L71T41+L71T48
+define  VIA4 = VIA4COMBINED-CAP2M
+define  VIA4CAP = VIA4COMBINED*CAP2M
+
+# The following information is taken from sky130 public documentation
+
+# Metal Resistances (in ohms/sq)
+# define odrs = 18   # OD 
+define pors = 48.2     # poly 
+define m1rs = 0.125 # M1   
+define m2rs = 0.125 # M2
+define m3rs = 0.047 # M3
+define m4rs = 0.047 # M4
+define m5rs = 0.029 # M5  
+
+# Via Resistances (in ohms/via)
+define v1rs = 4.5
+define v2rs = 3.41
+define v3rs = 3.41
+define v4rs = 0.38
+
+# Metal Thicknesses 
+# define odt = 0.086 # dd595 should check this
+define M1Thickness = 0.36
+define M2Thickness = 0.36
+define M3Thickness = 0.845
+define M4Thickness = 0.845  
+define M5Thickness = 1.26  
+
+# Dielectric thicknesses
+define  FOXT = 0.3262 	
+define   PSGT = 0.61 	
+define  LINTT = 0.075
+define NILD2T = 0.3499
+define NILD3T = 0.645
+define NILD4T = 0.78
+define NILD5T = 1.235
+define NILD6T = 1.35 	
+define TOPNITT = 0.377	
+define PI1T = 6.1346
+
+define  FOXK = 3.9
+define   PSGK = 3.9	
+define  LINTK = 7.3
+define NILD2K = 4.05
+define NILD3K = 4.5
+define NILD4K = 4.2
+define NILD5K = 4.1
+define NILD6K = 4.0
+define TOPNITK = 7.5
+define PI1K = 2.94
+
+# STACK UP
+# FEOL
+
+layer 0.12 1 1 #nwell
+layer 0.12 1.2 #diffusion
+layer FOXT FOXK
+layer PSGT PSGK
+#	conductor 0.9361 12.8 ohm/sq licon1
+	conductor 0.9361 12.8 licon1
+layer LINTT LINTK
+	conductor 0.1 12.8 li1	
+layer NILD2T NILD2K
+	conductor 0.34 9.3 mcon
+layer NILD3T NILD3K
+	conductor M1Thickness m1rs M1
+layer NILD4T NILD4K
+	conductor M2Thickness m2rs M2
+layer NILD5T NILD5K
+	conductor M3Thickness m3rs M3
+    offset M3Thickness + 0.1
+	conductor 0.1 15 CAPM
+layer NILD6T NILD6K
+	conductor M4Thickness m4rs M4
+	offset M4Thickness + 0.1
+	conductor 0.1 15 CAP2M
+layer TOPNITT TOPNITK
+    conductor M5Thickness m5rs M5
+layer PI1T PI1K
+
+# Top Boundry
+layer infinity 1 #Air
+
+# Via definitions
+#via OD M1 cors cosub
+via M1 M2 v1rs VIA1
+via M2 M3 v2rs VIA2
+via M3 M4 v3rs VIA3
+via CAPM M4 1e+06 S/m VIA3CAP
+#via CAPM M4 v3rs VIA3CAP
+via M4 M5 v4rs VIA4
+via CAP2M M5 1e+06 S/m VIA4CAP
+
+capacitor M3 CAPM M3*CAPM
+capacitor M4 CAP2M M4*CAP2M
