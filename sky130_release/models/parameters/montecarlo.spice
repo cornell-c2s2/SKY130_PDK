@@ -12769,8 +12769,6 @@
 .include "../../cells/pfet_01v8/sky130_fd_pr__pfet_01v8.pm3.spice"
 .include "../../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0.pm3.spice"
 .include "../../cells/pfet_g5v0d16v0/sky130_fd_pr__pfet_g5v0d16v0__subcircuit.pm3.spice"
-.include "../sonos_e/begin_of_life.pm3.spice"
-.include "../sonos_p/begin_of_life.pm3.spice"
 .include "../../cells/cap_vpp_08p6x07p8_l1m1m2_noshield/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_noshield_o1.model.spice"
 .include "../capacitors/sky130_fd_pr__model__cap_vpp_only_mos.model.spice"
 .include "../capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice"
