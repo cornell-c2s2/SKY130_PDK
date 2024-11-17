@@ -7,6 +7,7 @@ export PATH=$ASSURAHOME/tools/bin:$PATH
 export QRC_HOME=/opt/cadence/EXT152
 export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
 export PATH=/opt/cadence/SPECTRE231/bin:$PATH
+export PATH=/opt/cadence/XCELIUM2403/tools.lnx86/bin/:$PATH
 unset OA_HOME
 #
 export CDS_Netlisting_Mode=Analog
