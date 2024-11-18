@@ -17,16 +17,18 @@
 .param sky130_fd_pr__pfet_01v8__vth0_slope_spectre = 0.0
 .param sky130_fd_pr__pfet_01v8__voff_slope_spectre = 0.0
 .param sky130_fd_pr__pfet_01v8__nfactor_slope_spectre = 0.0
-* statistics {
-*   process {
-*   }
-*   mismatch {
-*     vary sky130_fd_pr__pfet_01v8__toxe_slope_spectre dist=gauss std = 1.0
-*     vary sky130_fd_pr__pfet_01v8__vth0_slope_spectre dist=gauss std = 1.0
-*     vary sky130_fd_pr__pfet_01v8__voff_slope_spectre dist=gauss std = 1.0
-*     vary sky130_fd_pr__pfet_01v8__nfactor_slope_spectre dist=gauss std = 1.0
-*   }
-* }
+simulator lang=spectre
+ statistics {
+   process {
+   }
+   mismatch {
+     vary sky130_fd_pr__pfet_01v8__toxe_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__pfet_01v8__vth0_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__pfet_01v8__voff_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__pfet_01v8__nfactor_slope_spectre dist=gauss std = 1.0u
+   }
+ }
+simulator lang=spice
 .subckt  pfet_01v8 d g s b
 + 
 .param  l = 1 w = 1 ad = 0 as = 0 pd = 0 ps = 0 nrd = 0 nrs = 0 sa = 0 sb = 0 sd = 0 mult = 1 nf = 1.0
