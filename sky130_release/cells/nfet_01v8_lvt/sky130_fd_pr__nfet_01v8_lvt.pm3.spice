@@ -22,10 +22,10 @@ simulator lang=spectre
    process {
    }
    mismatch {
-     vary sky130_fd_pr__nfet_01v8__toxe_slope_spectre dist=gauss std = 1.0u
-     vary sky130_fd_pr__nfet_01v8__vth0_slope_spectre dist=gauss std = 1.0u
-     vary sky130_fd_pr__nfet_01v8__voff_slope_spectre dist=gauss std = 1.0u
-     vary sky130_fd_pr__nfet_01v8__nfactor_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__nfet_01v8_lvt__toxe_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__nfet_01v8_lvt__vth0_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__nfet_01v8_lvt__voff_slope_spectre dist=gauss std = 1.0u
+     vary sky130_fd_pr__nfet_01v8_lvt__nfactor_slope_spectre dist=gauss std = 1.0u
    }
  }
 simulator lang=spice
