@@ -2,7 +2,7 @@
 module load cadence/cadence
 module load cadence/innovus
 #For parasitic extraction:
-export ASSURAHOME=/opt/cadence/assura
+export ASSURAHOME=/opt/cadence/ASSURA41
 export PATH=$ASSURAHOME/tools/bin:$PATH
 export QRC_HOME=/opt/cadence/EXT152
 export PATH=$QRC_HOME/bin:$QRC_HOME/tools/bin:$PATH
