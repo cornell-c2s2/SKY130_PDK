@@ -968,6 +968,12 @@ dmacro CAP_PROPERTIES dev_shape c_width c_length {
     ]
 }
 
+lvs_reduce_device  C (cap_mim_m3__base) -parallel yes [ tolerance l 0 w 0 
+ effective l , w 
+ l = sum ( l ) / count ( ) 
+ w = sum ( w ) 
+ ];
+
 lvs_cdn_flow_options -cdl_use_scale
 lvs_recognize_gates -none
 
