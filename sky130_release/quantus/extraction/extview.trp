@@ -1,7 +1,7 @@
 #trp_version_2
 #!force_model_overwrite
 #
-model: cap_mim_m3_1
+model: cap_mim_m3__base
 dfiiCell: lib=sky130_fd_pr_main cell=cap_mim_m3__base view=ivpcell
 pinMap:  PLUS=PLUS MINUS=MINUS
 pmExclude: m="1" 
