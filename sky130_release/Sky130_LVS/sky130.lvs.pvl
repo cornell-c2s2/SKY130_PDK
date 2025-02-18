@@ -961,10 +961,11 @@ dmacro RES_PROPERTIES dev_shape term_shape {
 dmacro CAP_PROPERTIES dev_shape c_width c_length {
     [ 
     PROPERTY
-    l, w
+    c, l, w
 
     l           = PERIMETER_COINCIDE( dev_shape , c_length ) 
     w           = PERIMETER_COINCIDE( dev_shape , c_width ) / 2
+    c           = (w*1e6 - 0.025)*(l*1e6 - 0.025)*2e-15 + (2*(w*1e6-0.025) + 2*(l*1e6+0.025))*0.19e-15
     ]
 }
 
